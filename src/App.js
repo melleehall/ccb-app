@@ -20,7 +20,7 @@ class App extends Component {
     })
   }
 
-  addBookmark = bookmark => {
+  addBookmarkToState = bookmark => {
     this.setState({
       bookmarks: [ ...this.state.bookmarks, bookmark ],
     })

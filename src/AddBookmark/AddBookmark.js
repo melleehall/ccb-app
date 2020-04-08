@@ -1,5 +1,4 @@
 import React, { Component } from  'react'
-import { withRouter } from 'react-router-dom'
 import BookmarksContext from '../BookmarksContext'
 import config from '../config'
 import './AddBookmark.css'
@@ -45,12 +44,14 @@ class AddBookmark extends Component {
         return res.json()
       })
       .then(data => {
+        console.log(data)
         title.value = ''
         url.value = ''
         description.value = ''
         rating.value = ''
-        this.context.AddBookmark(data)
+        this.context.addBookmark(data)
         this.props.history.push('/')
+        console.log(this.context)
       })
       .catch(error => {
         this.setState({ error })
@@ -133,7 +134,7 @@ class AddBookmark extends Component {
             </button>
             {' '}
             <button type='submit'>
-              Savex
+              Save
             </button>
           </div>
         </form>
@@ -142,4 +143,4 @@ class AddBookmark extends Component {
   }
 }
 
-export default withRouter(AddBookmark);
+export default AddBookmark;
