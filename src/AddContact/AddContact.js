@@ -1,7 +1,7 @@
 import React, { Component } from  'react'
 import BookmarksContext from '../BookmarksContext'
 import config from '../config'
-import './AddBookmark.css'
+import './AddContact.css'
 
 const Required = () => (
   <span className='AddBookmark__required'>*</span>
@@ -22,7 +22,7 @@ class AddBookmark extends Component {
       title: title.value,
       url: url.value,
       description: description.value,
-      rating: rating.value,
+      rating: Number(rating.value),
     }
     this.setState({ error: null })
     fetch(config.API_ENDPOINT, {
@@ -54,6 +54,7 @@ class AddBookmark extends Component {
         console.log(this.context)
       })
       .catch(error => {
+        console.log(error)
         this.setState({ error })
       })
   }
@@ -67,7 +68,7 @@ class AddBookmark extends Component {
     
     return (
       <section className='AddBookmark'>
-        <h2>Create a bookmark</h2>
+        <h2>Create a contact</h2>
         <form
           className='AddBookmark__form'
           onSubmit={this.handleSubmit}
@@ -77,7 +78,7 @@ class AddBookmark extends Component {
           </div>
           <div>
             <label htmlFor='title'>
-              Title
+              First Name
               {' '}
               <Required />
             </label>
@@ -85,13 +86,13 @@ class AddBookmark extends Component {
               type='text'
               name='title'
               id='title'
-              placeholder='Great website!'
+              placeholder='Melanie'
               required
             />
           </div>
           <div>
             <label htmlFor='url'>
-              URL
+              Last Name
               {' '}
               <Required />
             </label>
@@ -105,7 +106,7 @@ class AddBookmark extends Component {
           </div>
           <div>
             <label htmlFor='description'>
-              Description
+              Address
             </label>
             <textarea
               name='description'

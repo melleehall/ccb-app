@@ -11,7 +11,7 @@ class BookmarkList extends Component {
     const { bookmarks } = this.context
     return (
       <section className='BookmarkList'>
-        <h2>Your bookmarks</h2>
+        <h2>Contact List</h2>
         <ul className='BookmarkList__list' aria-live='polite'>
           {bookmarks.map(bookmark =>
             <BookmarkItem

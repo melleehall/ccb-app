@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
-import AddBookmark from './AddBookmark/AddBookmark'
-import BookmarkList from './BookmarkList/BookmarkList'
-import BookmarksContext from './BookmarksContext'
-import Nav from './Nav/Nav'
 import config from './config'
 import './App.css'
+
+import AddContact from './AddContact/AddContact'
+import BookmarkList from './BookmarkList/BookmarkList'
+import BookmarksContext from './BookmarksContext'
+import Logo from './Logo/Logo'
+import CCBNav from './CCBNav/CCBNav'
+import DesktopNav from './DesktopNav/DesktopNav'
+import MobileNav from './MobileNav/MobileNav'
+import Nav from './Nav/Nav'
 
 class App extends Component {
   state = {
@@ -20,7 +25,7 @@ class App extends Component {
     })
   }
 
-  addBookmarkToState = bookmark => {
+  addBookmark = bookmark => {
     this.setState({
       bookmarks: [ ...this.state.bookmarks, bookmark ],
     })
@@ -63,13 +68,21 @@ class App extends Component {
 
     return (
       <main className='App'>
-        <h1>Bookmarks!</h1>
+        <nav className='App_nav'>
+           <Route 
+            exact path='/' 
+            component={CCBNav}
+          /> 
+        </nav>
+        <header>
+          <h1><Logo /></h1>
+        </header>
         <BookmarksContext.Provider value={contextValue}>
           <Nav />
           <div className='content' aria-live='polite'>
             <Route
               path='/add-bookmark'
-              component={AddBookmark}
+              component={AddContact}
             />
             <Route
               exact

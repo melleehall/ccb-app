@@ -5,11 +5,11 @@ export default function Nav(props) {
   return (
     <nav className='Nav'>
       <Link to={'/'}>
-        Bookmark List
+        Contacts List
       </Link>
       {' '}
       <Link to={'/add-bookmark'}>
-        Add Bookmark
+        Add Contact
       </Link>
     </nav>
   );

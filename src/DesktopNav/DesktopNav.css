@@ -1,0 +1,66 @@
+.topnav-desktop {
+    height: 500px;
+}
+  
+.topnav-desktop {
+    height: 44px;
+    overflow: scroll;
+    background:#065549;
+}
+  
+.topnav-desktop ul {
+    display: flex;
+    height: 44px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+  
+.topnav-desktop li {
+      margin-left: 0px;
+}
+  
+.topnav-desktop a {
+    display: block;
+    color: white;
+    font-size: 15px; 
+    text-decoration: none;
+    transition: 0.3s;
+}
+  
+.topnav-desktop a:hover {
+    color: #B8B8B8;
+}
+
+.topnav-desktop-inner {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.topnav-desktop {
+    display: none;
+}
+
+/* Device = Tablets, Ipads (portrait) */
+/* Screen = B/w 768px to 1024px */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* hide mobile nav */
+    .topnav-desktop {
+        display: block;
+    }
+}
+
+
+/* Device = Laptops, Desktops */
+/* Screen = 1025px and up
+*/
+
+@media (min-width: 1025px) {
+    /* hide mobile nav */
+    .topnav-desktop {
+        display: block;
+    }
+}

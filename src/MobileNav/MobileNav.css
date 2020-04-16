@@ -1,0 +1,55 @@
+.mobile-nav {
+    height: 45px;
+}
+
+.topnav-mobile {
+    overflow: hidden;
+    background-color:#065549;
+    position: relative;
+}
+  
+.topnav-mobile #myLinks {
+    display: none;
+}
+  
+.topnav-mobile a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+.topnav-mobile a.menu {
+    background: #065549;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+  
+.topnav-mobile a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Device = Tablets, Ipads (portrait) */
+/* Screen = B/w 768px to 1024px */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* display DesktopNav instead */
+    .topnav-mobile {
+        display: none;
+    }
+}
+
+
+/* Device = Laptops, Desktops */
+/* Screen = 1025px and up */
+
+@media (min-width: 1025px) {
+    /* hide mobile nav */
+    .topnav-mobile {
+        display: none;
+    }
+}
