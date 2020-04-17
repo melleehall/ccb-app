@@ -1,6 +1,7 @@
 import React, { Component } from  'react'
 import BookmarksContext from '../BookmarksContext'
 import config from '../config'
+import SignupPathText from '../SignupPathText/SignupPathText'
 import './AddContact.css'
 
 const Required = () => (
@@ -17,12 +18,16 @@ class AddBookmark extends Component {
   handleSubmit = e => {
     e.preventDefault()
     // get the form fields from the event
-    const { title, url, description, rating } = e.target
+    const { firstname, lastname, email, phone, streetnum, streetname, city, zip } = e.target
     const bookmark = {
-      title: title.value,
-      url: url.value,
-      description: description.value,
-      rating: Number(rating.value),
+      firstname: firstname.value,
+      lastname: lastname.value,
+      email: email.value,
+      phone: phone.value,
+      streetnum: streetnum.value,
+      streetname: streetname.value,
+      city: city.value,
+      zip: zip.value
     }
     this.setState({ error: null })
     fetch(config.API_ENDPOINT, {
@@ -45,10 +50,14 @@ class AddBookmark extends Component {
       })
       .then(data => {
         console.log(data)
-        title.value = ''
-        url.value = ''
-        description.value = ''
-        rating.value = ''
+        firstname.value = ''
+        lastname.value = ''
+        email.value = ''
+        phone.value = ''
+        streetnum.value = ''
+        streetname.value = ''
+        city.value = ''
+        zip.value = ''
         this.context.addBookmark(data)
         this.props.history.push('/')
         console.log(this.context)
@@ -67,78 +76,142 @@ class AddBookmark extends Component {
     const { error } = this.state
     
     return (
-      <section className='AddBookmark'>
-        <h2>Create a contact</h2>
-        <form
-          className='AddBookmark__form'
-          onSubmit={this.handleSubmit}
-        >
-          <div className='AddBookmark__error' role='alert'>
-            {error && <p>{error.message}</p>}
-          </div>
-          <div>
-            <label htmlFor='title'>
-              First Name
+      <section>
+        <section className='AddBookmark'>
+          <h2>Sign Up Today</h2>
+          <form
+            className='AddBookmark__form'
+            onSubmit={this.handleSubmit}
+          >
+            <div className='AddBookmark__error' role='alert'>
+              {error && <p>{error.message}</p>}
+            </div>
+            <div>
+              <label htmlFor='firstname'>
+                First Name
+                {' '}
+                <Required />
+              </label>
+              <input
+                type='text'
+                name='firstname'
+                id='firstname'
+                placeholder='Josey'
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor='lastname'>
+                Last Name
+                {' '}
+                <Required />
+              </label>
+              <input
+                type='text'
+                name='lastname'
+                id='lastname'
+                placeholder='Johnson'
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor='email'>
+                Email
+                {' '}
+                <Required />
+              </label>
+              <input
+                type='text'
+                name='email'
+                id='email'
+                placeholder='myemail@gmail.com'
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor='phone'>
+                Last Name
+                {' '}
+                <Required />
+              </label>
+              <input
+                type='text'
+                name='phone'
+                id='phone'
+                placeholder='(303)-123-4567'
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor='streetnum'>
+                Street Number
+                {' '}
+                <Required />
+              </label>
+              <input
+                type='text'
+                name='streetnum'
+                id='streetnum'
+                placeholder='Frog Road'
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor='streetname'>
+                Street Name
+                {' '}
+                <Required />
+              </label>
+              <input
+                type='text'
+                name='streetname'
+                id='streetname'
+                placeholder='Frog Road'
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor='city'>
+                City
+                {' '}
+                <Required />
+              </label>
+              <input
+                type='text'
+                name='city'
+                id='city'
+                placeholder='Evergreen'
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor='zip'>
+                Zipcode
+                {' '}
+                <Required />
+              </label>
+              <input
+                type='text'
+                name='zip'
+                id='zip'
+                placeholder='97531'
+                required
+              />
+            </div>
+            <div className='AddBookmark__buttons'>
+              <button type='button' onClick={this.handleClickCancel}>
+                Cancel
+              </button>
               {' '}
-              <Required />
-            </label>
-            <input
-              type='text'
-              name='title'
-              id='title'
-              placeholder='Melanie'
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor='url'>
-              Last Name
-              {' '}
-              <Required />
-            </label>
-            <input
-              type='url'
-              name='url'
-              id='url'
-              placeholder='https://www.great-website.com/'
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor='description'>
-              Address
-            </label>
-            <textarea
-              name='description'
-              id='description'
-            />
-          </div>
-          <div>
-            <label htmlFor='rating'>
-              Rating
-              {' '}
-              <Required />
-            </label>
-            <input
-              type='number'
-              name='rating'
-              id='rating'
-              defaultValue='1'
-              min='1'
-              max='5'
-              required
-            />
-          </div>
-          <div className='AddBookmark__buttons'>
-            <button type='button' onClick={this.handleClickCancel}>
-              Cancel
-            </button>
-            {' '}
-            <button type='submit'>
-              Save
-            </button>
-          </div>
-        </form>
+              <button type='submit'>
+                Save
+              </button>
+            </div>
+          </form>
+        </section>
+        <section>
+          <SignupPathText />
+        </section>
       </section>
     );
   }

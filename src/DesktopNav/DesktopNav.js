@@ -4,8 +4,8 @@ import './DesktopNav.css'
 export default class DesktopNav extends Component {
     render() {
         return (
-            <section class="topnav-desktop">
-                <div class='topnav-desktop-inner'>
+            <section className="topnav-desktop">
+                <div className='topnav-desktop-inner'>
                     <ul>
                         <li><a href='#home-desktop' id='home-desktop'>Home</a></li>
                         <li><a href='#signup-desktop' id='signup-desktop'>Signup</a></li>

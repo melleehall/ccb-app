@@ -4,12 +4,10 @@ import config from './config'
 import './App.css'
 
 import AddContact from './AddContact/AddContact'
-import BookmarkList from './BookmarkList/BookmarkList'
+import ContactList from './ContactList/ContactList'
 import BookmarksContext from './BookmarksContext'
 import Logo from './Logo/Logo'
 import CCBNav from './CCBNav/CCBNav'
-import DesktopNav from './DesktopNav/DesktopNav'
-import MobileNav from './MobileNav/MobileNav'
 import Nav from './Nav/Nav'
 
 class App extends Component {
@@ -69,13 +67,11 @@ class App extends Component {
     return (
       <main className='App'>
         <nav className='App_nav'>
-           <Route 
-            exact path='/' 
-            component={CCBNav}
-          /> 
+            <CCBNav />
         </nav>
         <header>
-          <h1><Logo /></h1>
+          <div><Logo /></div>
+          <h1 className='black-font'>Hi, Clear Creek Resident! Ready for faster internet?</h1>
         </header>
         <BookmarksContext.Provider value={contextValue}>
           <Nav />
@@ -87,7 +83,7 @@ class App extends Component {
             <Route
               exact
               path='/'
-              component={BookmarkList}
+              component={ContactList}
             />
           </div>
         </BookmarksContext.Provider>

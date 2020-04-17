@@ -16,6 +16,7 @@
 
 .AddBookmark__form label {
   margin-top: 10px;
+  color: white;
 }
 
 .AddBookmark__buttons {
@@ -29,4 +30,9 @@
 .AddBookmark__error p {
   color: #a51414;
   margin-bottom: 5px;
+}
+
+form {
+  background-color: #065549;
+  padding: 25px;
 }

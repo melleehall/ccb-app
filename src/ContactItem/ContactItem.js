@@ -1,9 +1,8 @@
 import React from 'react'
-import Rating from '../Rating/Rating'
 import BookmarksContext from '../BookmarksContext'
 import config from '../config'
 import PropTypes from 'prop-types'
-import './BookmarkItem.css'
+import './ContactItem.css'
 
 function deleteBookmarkRequest(bookmarkId, cb) {
   fetch(config.API_ENDPOINT + `/${bookmarkId}`, {
@@ -39,14 +38,21 @@ export default function BookmarkItem(props) {
                 href={props.url}
                 target='_blank'
                 rel='noopener noreferrer'>
-                {props.title}
+                {props.firstname}
               </a>
             </h3>
-            <Rating value={props.rating} />
           </div>
-          <p className='BookmarkItem__description'>
-            {props.description}
-          </p>
+          <section className='BookmarkItem__description'>
+            <ul>
+              <li>{props.lastname}</li>
+              <li>{props.email}</li>
+              <li>{props.phone}</li>
+              <li>{props.streetnum}</li>
+              <li>{props.streetname}</li>
+              <li>{props.city}</li>
+              <li>{props.zip}</li>
+            </ul>
+          </section>
           <div className='BookmarkItem__buttons'>
             <button
               className='BookmarkItem__description'
@@ -72,22 +78,12 @@ BookmarkItem.defaultProps = {
 }
 
 BookmarkItem.propTypes = {
-  title: PropTypes.string.isRequired,
-  url: (props, propName, componentName) => {
-    const prop = props[propName];
-
-    if(!prop) {
-      return new Error(`${propName} is required in ${componentName}.  Validation Failed`)
-    }
-
-    if (typeof prop != 'string') {
-      return new Error(`Invalid prop, ${propName} is expected to be a string. in ${componentName}. ${typeof prop} found`)
-    }
-
-    if (prop.length < 5 || !prop.match(new RegExp(/^https?:\/\//))) {
-      return new Error(`Invalid prop, ${propName} must be min length 5 and begin http(s)://. Validation Failed.`)
-    }
-  },
-  rating: PropTypes.number,
-  description: PropTypes.string
+  firstname: PropTypes.string.isRequired,
+  lastname: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  phone: PropTypes.string.isRequired,
+  streetnum: PropTypes.number.isRequired,
+  streetname: PropTypes.string.isRequired,
+  city: PropTypes.string.isRequired,
+  zip: PropTypes.number.isRequired,
 }
