@@ -5,37 +5,37 @@ import './App.css'
 
 import AddContact from './AddContact/AddContact'
 import ContactList from './ContactList/ContactList'
-import BookmarksContext from './BookmarksContext'
+import ContactsContext from './ContactsContext'
 import Logo from './Logo/Logo'
 import CCBNav from './CCBNav/CCBNav'
 import Nav from './Nav/Nav'
 
 class App extends Component {
   state = {
-    bookmarks: [],
+    contacts: [],
     error: null,
   };
 
-  setBookmarks = bookmarks => {
+  setContacts = contacts => {
     this.setState({
-      bookmarks,
+      contacts,
       error: null,
     })
   }
 
-  addBookmark = bookmark => {
+  addContact = contact => {
     this.setState({
-      bookmarks: [ ...this.state.bookmarks, bookmark ],
+      contacts: [ ...this.state.contacts, contact ],
     })
   }
 
-  deleteBookmark = bookmarkId => {
-    console.log(bookmarkId)
-    const newBookmarks = this.state.bookmarks.filter(bm =>
-      bm.id !== bookmarkId
+  deleteContact = contactId => {
+    console.log(contactId)
+    const newContacts = this.state.contacts.filter(contact =>
+      contact.id !== contactId
     )
     this.setState({
-      bookmarks: newBookmarks
+      contacts: newContacts
     })
   }
 
@@ -53,19 +53,19 @@ class App extends Component {
         }
         return res.json()
       })
-      .then(this.setBookmarks)
+      .then(this.setContacts)
       .catch(error => this.setState({ error }))
   }
 
   render() {
     const contextValue = {
-      bookmarks: this.state.bookmarks,
-      addBookmark: this.addBookmark,
-      deleteBookmark: this.deleteBookmark,
+      contacts: this.state.contacts,
+      addContact: this.addContact,
+      deleteContact: this.deleteContact,
     }
 
     return (
-      <main className='App'>
+      <section className='App'>
         <nav className='App_nav'>
             <CCBNav />
         </nav>
@@ -73,9 +73,9 @@ class App extends Component {
           <div><Logo /></div>
           <h1 className='black-font'>Hi, Clear Creek Resident! Ready for faster internet?</h1>
         </header>
-        <BookmarksContext.Provider value={contextValue}>
+        <ContactsContext.Provider value={contextValue}>
           <Nav />
-          <div className='content' aria-live='polite'>
+          <main className='content' aria-live='polite'>
             <Route
               path='/add-bookmark'
               component={AddContact}
@@ -85,9 +85,9 @@ class App extends Component {
               path='/'
               component={ContactList}
             />
-          </div>
-        </BookmarksContext.Provider>
-      </main>
+          </main>
+        </ContactsContext.Provider>
+      </section>
     );
   }
 }

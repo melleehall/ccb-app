@@ -1,5 +1,5 @@
 import React, { Component } from  'react'
-import BookmarksContext from '../BookmarksContext'
+import ContactsContext from '../ContactsContext'
 import config from '../config'
 import SignupPathText from '../SignupPathText/SignupPathText'
 import './AddContact.css'
@@ -8,8 +8,8 @@ const Required = () => (
   <span className='AddBookmark__required'>*</span>
 )
 
-class AddBookmark extends Component {
-  static contextType = BookmarksContext;
+class AddContact extends Component {
+  static contextType = ContactsContext;
 
   state = {
     error: null,
@@ -19,7 +19,8 @@ class AddBookmark extends Component {
     e.preventDefault()
     // get the form fields from the event
     const { firstname, lastname, email, phone, streetnum, streetname, city, zip } = e.target
-    const bookmark = {
+
+    const contact = {
       firstname: firstname.value,
       lastname: lastname.value,
       email: email.value,
@@ -29,10 +30,11 @@ class AddBookmark extends Component {
       city: city.value,
       zip: zip.value
     }
+    console.log(contact)
     this.setState({ error: null })
     fetch(config.API_ENDPOINT, {
       method: 'POST',
-      body: JSON.stringify(bookmark),
+      body: JSON.stringify(contact),
       headers: {
         'content-type': 'application/json',
         'authorization': `bearer ${config.API_KEY}`
@@ -49,7 +51,6 @@ class AddBookmark extends Component {
         return res.json()
       })
       .then(data => {
-        console.log(data)
         firstname.value = ''
         lastname.value = ''
         email.value = ''
@@ -58,9 +59,8 @@ class AddBookmark extends Component {
         streetname.value = ''
         city.value = ''
         zip.value = ''
-        this.context.addBookmark(data)
+        this.context.addContact(data)
         this.props.history.push('/')
-        console.log(this.context)
       })
       .catch(error => {
         console.log(error)
@@ -116,7 +116,7 @@ class AddBookmark extends Component {
             </div>
             <div>
               <label htmlFor='email'>
-                Email
+                Email Address
                 {' '}
                 <Required />
               </label>
@@ -130,7 +130,7 @@ class AddBookmark extends Component {
             </div>
             <div>
               <label htmlFor='phone'>
-                Last Name
+                Phone Number
                 {' '}
                 <Required />
               </label>
@@ -152,7 +152,7 @@ class AddBookmark extends Component {
                 type='text'
                 name='streetnum'
                 id='streetnum'
-                placeholder='Frog Road'
+                placeholder='123'
                 required
               />
             </div>
@@ -217,4 +217,4 @@ class AddBookmark extends Component {
   }
 }
 
-export default AddBookmark;
+export default AddContact;

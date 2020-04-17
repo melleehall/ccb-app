@@ -1,11 +1,11 @@
 import React from 'react'
-import BookmarksContext from '../BookmarksContext'
+import ContactsContext from '../ContactsContext'
 import config from '../config'
 import PropTypes from 'prop-types'
 import './ContactItem.css'
 
-function deleteBookmarkRequest(bookmarkId, cb) {
-  fetch(config.API_ENDPOINT + `/${bookmarkId}`, {
+function deleteContactRequest(contactId, cb) {
+  fetch(config.API_ENDPOINT + `/${contactId}`, {
     method: 'DELETE',
     headers: {
       'content-type': 'application/json',
@@ -19,7 +19,7 @@ function deleteBookmarkRequest(bookmarkId, cb) {
       return res.json()
     })
     .then(data => {
-      cb(bookmarkId)
+      cb(contactId)
     })
     .catch(error => {
       console.error(error)
@@ -27,9 +27,9 @@ function deleteBookmarkRequest(bookmarkId, cb) {
 }
 
 
-export default function BookmarkItem(props) {
+export default function ContactItem(props) {
   return (
-    <BookmarksContext.Consumer>
+    <ContactsContext.Consumer>
       {(context) => (
         <li className='BookmarkItem'>
           <div className='BookmarkItem__row'>
@@ -57,9 +57,9 @@ export default function BookmarkItem(props) {
             <button
               className='BookmarkItem__description'
               onClick={() => {
-                deleteBookmarkRequest(
+                deleteContactRequest(
                   props.id, 
-                  context.deleteBookmark,
+                  context.deleteContact,
                 )
               }}
             >
@@ -68,16 +68,16 @@ export default function BookmarkItem(props) {
           </div>
         </li>
       )}
-    </BookmarksContext.Consumer>
+    </ContactsContext.Consumer>
   )
 }
 
-BookmarkItem.defaultProps = {
+ContactItem.defaultProps = {
   rating: 1,
   description: " "
 }
 
-BookmarkItem.propTypes = {
+ContactItem.propTypes = {
   firstname: PropTypes.string.isRequired,
   lastname: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
@@ -85,5 +85,5 @@ BookmarkItem.propTypes = {
   streetnum: PropTypes.number.isRequired,
   streetname: PropTypes.string.isRequired,
   city: PropTypes.string.isRequired,
-  zip: PropTypes.number.isRequired,
+  zip: PropTypes.string.isRequired,
 }
