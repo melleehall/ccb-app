@@ -1,0 +1,43 @@
+/* Universal Color Combinations */
+.lightestgray {
+    color: black;
+    background-color: #EFEFEF;
+    padding: 40px;
+}
+
+.midgray {
+    color: black;
+    background-color: #b5b6b7;
+    padding: 40px;
+}
+
+.black-font {
+    color: black;
+}
+
+.darkgreen {
+    color: white;
+    background-color:#065549;
+}
+
+/* Universal Style Applications */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2 {
+    font-weight: 400;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    list-style: none;
+    margin-left: 20px;
+}

@@ -1,0 +1,53 @@
+/* Support View */
+h1 {
+    font-size: 26px;
+    color: black;
+}
+
+.faq-list {
+    text-align: left;
+    padding: 0px;
+}
+
+.faq-list li {
+    margin: 0px;
+}
+
+.faq-question,
+.faq-answer {
+    padding: 0px;
+    font-size: 18px;
+}
+
+.faq-question {
+    font-weight: 700;
+}
+
+.faq-list li,
+.service-form-content {
+    overflow-wrap: break-word;
+}
+
+.support-btns {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.support-btns a {
+    color: white;
+    background-color: #0e6afd;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 50px;
+}
+
+.glasses-img {
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+}

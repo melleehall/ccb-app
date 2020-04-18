@@ -6,7 +6,7 @@ export default class MobileNav extends Component {
         return (
             <section>
                 <div className='topnav-mobile'>
-                    <a href='https://www.clearcreekrbroadband.com' className='darkgreen mobile-nav'>Clear Creek Broadband</a>
+                    <a href='https://www.clearcreekbroadband.com' className='darkgreen mobile-nav'>Clear Creek Broadband</a>
                     <div id='myLinks'>
                         <a href='#home' id='home'>Home</a>
                         <a href='#signup' id='signup'>Signup</a>
@@ -14,7 +14,7 @@ export default class MobileNav extends Component {
                         <a href='#service-desk' id='service-desk'>FAQ + Support</a>
                         <a href='#contact' id='contact'>Contact</a>
                     </div>
-                    <a href='www.clearcreekrbroadband.com' className='menu' >
+                    <a href='www.clearcreekbroadband.com' className='menu' >
                     <i className='fa fa-bars'>menu</i>
                     </a>
                 </div>
