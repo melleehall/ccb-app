@@ -1,7 +1,6 @@
 import React, { Component } from  'react'
 import ContactsContext from '../ContactsContext'
 import config from '../config'
-import SignupPathText from '../SignupPathText/SignupPathText'
 import './AddContact.css'
 
 const Required = () => (
@@ -13,6 +12,8 @@ class AddContact extends Component {
 
   state = {
     error: null,
+    service: false,
+    news: false
   };
 
   handleSubmit = e => {
@@ -70,6 +71,23 @@ class AddContact extends Component {
 
   handleClickCancel = () => {
     this.props.history.push('/')
+  }
+
+  toggleInput= () => {
+    const currentState = this.state.request_service
+    console.log(currentState)
+    const newStatus = true;
+
+      if (this.state.service=true){
+        this.setState = ({
+        service: false
+        });
+      }
+      else{
+        this.setState = ({
+        service: true
+      })
+    }
   }
 
   render() {
@@ -198,6 +216,30 @@ class AddContact extends Component {
                 required
               />
             </div>
+            <div>
+              <label htmlFor='request_service'>
+                Request Service
+              </label>
+              <input
+                type='checkbox'
+                name='request_service'
+                // checked={this.state.request_service}
+                onChange={this.toggleInput}
+                id='request_service'
+              />
+            </div>
+            <div>
+              <label htmlFor='request_news'>
+                Subscribe to Mailing List
+              </label>
+              <input
+                type='checkbox'
+                name='request_news'
+                // checked={this.state.request_news}
+                onChange={this.toggleInput}
+                id='request_news'
+              />
+            </div>
             <div className='AddBookmark__buttons'>
               <button type='button' onClick={this.handleClickCancel}>
                 Cancel
@@ -208,9 +250,6 @@ class AddContact extends Component {
               </button>
             </div>
           </form>
-        </section>
-        <section>
-          <SignupPathText />
         </section>
       </section>
     );

@@ -42,7 +42,7 @@ export default class HomeView extends Component {
                         We will update this website frequently to keep everyone aware of progress and updates.
                     </p>
                     <div class='img-container'>
-                        <img src='mntlaptop.jpg' alt='laptop with mountain background image' class='img'/>
+                        <img src='mntlaptop.jpg' alt='laptop with mountain background' class='img'/>
                         <div class='mnt-txt'>
                          
                             ENJOY THE INTERNET SERVICES OF TODAY... & TOMORROW.

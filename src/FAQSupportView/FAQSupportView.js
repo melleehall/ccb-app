@@ -63,14 +63,14 @@ export default class FAQSupportView extends Component {
                         <li>
                             <p className='faq-question'>Can I see a map of the proposed broadband service area?</p>
                             <p className='faq-answer'>
-                                Yes! To view a current version of the service area map, please click here: <a href={CCCProposedLIDMap08012018} target='_blank'>Proposed Broadband Service Area Map</a>
+                                Yes! To view a current version of the service area map, please click here: <a href={CCCProposedLIDMap08012018} target='_blank' rel="noopener noreferrer">Proposed Broadband Service Area Map</a>
                                 The service areas include Old Squaw Pass, Echo Hills, Upper Witter Gulch, Lower Witter Gulch/Circle K, and Golden Willow/Yankee Creek.
                             </p>
                         </li>
                         <li>
                             <p className='faq-question'>What is the proposed design for the broadband system?</p>
                             <p className='faq-answer'>
-                                For an aerial view of the proposed broadband system design, please click here: <a href={CCBLIDRoutes08202018} target='_blank'>CCB Map of the Proposed Broadband System Design</a>
+                                For an aerial view of the proposed broadband system design, please click here: <a href={CCBLIDRoutes08202018} target='_blank' rel="noopener noreferrer">CCB Map of the Proposed Broadband System Design</a>
                             </p>
                         </li>
                     </ul>
