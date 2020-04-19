@@ -78,7 +78,6 @@ class App extends Component {
           <div><Logo /></div>
         </header>
         <ContactsContext.Provider value={contextValue}>
-          <Nav />
           <main className='content' aria-live='polite'>
             <Switch>
               <Route

@@ -38,10 +38,12 @@ form {
   padding: 25px;
 }
 
+h2, 
 h3 {
   color: white;
   text-align: center;
   font-size: 26px;
+  font-weight: 400;
 }
 
 .personal_info label,

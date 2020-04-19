@@ -92,11 +92,11 @@ class AddContact extends Component {
     return (
       <section>
         <section className='AddBookmark'>
-          <h2>Sign Up Today</h2>
           <form
             className='AddBookmark__form'
             onSubmit={this.handleSubmit}
           >
+            <h2>Sign Up Today</h2>
             <div className='AddBookmark__error' role='alert'>
               {error && <p>{error.message}</p>}
             </div>
