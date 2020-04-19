@@ -12,8 +12,8 @@ class AddContact extends Component {
 
   state = {
     error: null,
-    service: false,
-    news: false
+    request_service: false,
+    request_news: false
   };
 
   handleSubmit = e => {
@@ -29,7 +29,9 @@ class AddContact extends Component {
       streetnum: streetnum.value,
       streetname: streetname.value,
       city: city.value,
-      zip: zip.value
+      zip: zip.value,
+      request_service: this.state.request_service,
+      request_news: this.state.request_news
     }
     console.log(contact)
     this.setState({ error: null })
@@ -61,7 +63,6 @@ class AddContact extends Component {
         city.value = ''
         zip.value = ''
         this.context.addContact(data)
-        this.props.history.push('/')
       })
       .catch(error => {
         console.log(error)
@@ -73,21 +74,16 @@ class AddContact extends Component {
     this.props.history.push('/')
   }
 
-  toggleInput= () => {
-    const currentState = this.state.request_service
-    console.log(currentState)
-    const newStatus = true;
+  toggleReqService= () => {
+    this.setState(prevState => ({
+      request_service: !prevState.request_service,
+    }));
+  }
 
-      if (this.state.service=true){
-        this.setState = ({
-        service: false
-        });
-      }
-      else{
-        this.setState = ({
-        service: true
-      })
-    }
+  toggleReqNews= () => {
+    this.setState(prevState => ({
+      request_news: !prevState.request_news,
+    }));
   }
 
   render() {
@@ -104,142 +100,149 @@ class AddContact extends Component {
             <div className='AddBookmark__error' role='alert'>
               {error && <p>{error.message}</p>}
             </div>
-            <div>
-              <label htmlFor='firstname'>
-                First Name
-                {' '}
-                <Required />
-              </label>
-              <input
-                type='text'
-                name='firstname'
-                id='firstname'
-                placeholder='Josey'
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor='lastname'>
-                Last Name
-                {' '}
-                <Required />
-              </label>
-              <input
-                type='text'
-                name='lastname'
-                id='lastname'
-                placeholder='Johnson'
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor='email'>
-                Email Address
-                {' '}
-                <Required />
-              </label>
-              <input
-                type='text'
-                name='email'
-                id='email'
-                placeholder='myemail@gmail.com'
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor='phone'>
-                Phone Number
-                {' '}
-                <Required />
-              </label>
-              <input
-                type='text'
-                name='phone'
-                id='phone'
-                placeholder='(303)-123-4567'
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor='streetnum'>
-                Street Number
-                {' '}
-                <Required />
-              </label>
-              <input
-                type='text'
-                name='streetnum'
-                id='streetnum'
-                placeholder='123'
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor='streetname'>
-                Street Name
-                {' '}
-                <Required />
-              </label>
-              <input
-                type='text'
-                name='streetname'
-                id='streetname'
-                placeholder='Frog Road'
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor='city'>
-                City
-                {' '}
-                <Required />
-              </label>
-              <input
-                type='text'
-                name='city'
-                id='city'
-                placeholder='Evergreen'
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor='zip'>
-                Zipcode
-                {' '}
-                <Required />
-              </label>
-              <input
-                type='text'
-                name='zip'
-                id='zip'
-                placeholder='97531'
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor='request_service'>
-                Request Service
-              </label>
-              <input
-                type='checkbox'
-                name='request_service'
-                // checked={this.state.request_service}
-                onChange={this.toggleInput}
-                id='request_service'
-              />
-            </div>
-            <div>
-              <label htmlFor='request_news'>
-                Subscribe to Mailing List
-              </label>
-              <input
-                type='checkbox'
-                name='request_news'
-                // checked={this.state.request_news}
-                onChange={this.toggleInput}
-                id='request_news'
-              />
-            </div>
+            <fieldset className='personal_info'>
+              <div>
+                <label htmlFor='firstname'>
+                  First Name
+                  {' '}
+                  <Required />
+                </label>
+                <input
+                  type='text'
+                  name='firstname'
+                  id='firstname'
+                  placeholder='Josey'
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor='lastname'>
+                  Last Name
+                  {' '}
+                  <Required />
+                </label>
+                <input
+                  type='text'
+                  name='lastname'
+                  id='lastname'
+                  placeholder='Johnson'
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor='email'>
+                  Email Address
+                  {' '}
+                  <Required />
+                </label>
+                <input
+                  type='text'
+                  name='email'
+                  id='email'
+                  placeholder='myemail@gmail.com'
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor='phone'>
+                  Phone Number
+                  {' '}
+                  <Required />
+                </label>
+                <input
+                  type='text'
+                  name='phone'
+                  id='phone'
+                  placeholder='(303)-123-4567'
+                  required
+                />
+              </div>
+            </fieldset>
+            <fieldset className='address'>
+              <div>
+                <label htmlFor='streetnum'>
+                  Street Number
+                  {' '}
+                  <Required />
+                </label>
+                <input
+                  type='text'
+                  name='streetnum'
+                  id='streetnum'
+                  placeholder='123'
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor='streetname'>
+                  Street Name
+                  {' '}
+                  <Required />
+                </label>
+                <input
+                  type='text'
+                  name='streetname'
+                  id='streetname'
+                  placeholder='Frog Road'
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor='city'>
+                  City
+                  {' '}
+                  <Required />
+                </label>
+                <input
+                  type='text'
+                  name='city'
+                  id='city'
+                  placeholder='Evergreen'
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor='zip'>
+                  Zipcode
+                  {' '}
+                  <Required />
+                </label>
+                <input
+                  type='text'
+                  name='zip'
+                  id='zip'
+                  placeholder='97531'
+                  required
+                />
+              </div>
+            </fieldset>
+            <fieldset className='signup_options'>
+              <h3>Signup Options</h3>
+              <div className='flex-row'>
+                <label htmlFor='request_service'>
+                  Request Service
+                </label>
+                <input
+                  type='checkbox'
+                  name='request_service'
+                  checked={this.state.request_service}
+                  onChange={this.toggleReqService}
+                  id='request_service'
+                />
+              </div>
+              <div className='flex-row'>
+                <label htmlFor='request_news'>
+                  Subscribe to Mailing List
+                </label>
+                <input
+                  type='checkbox'
+                  name='request_news'
+                  checked={this.state.request_news}
+                  onChange={this.toggleReqNews}
+                  id='request_news'
+                />
+              </div>
+            </fieldset>
             <div className='AddBookmark__buttons'>
               <button type='button' onClick={this.handleClickCancel}>
                 Cancel
