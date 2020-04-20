@@ -13,12 +13,12 @@
 }
 
 p, ul {
-    margin-top: 30px;
+    margin-top: 25px;
     font-size: 20px;
 }
 
 .who-are-we {
-    margin-top: 180px;
+    margin-top: 250px;
 }
 
 .wires-img,
@@ -49,10 +49,13 @@ p, ul {
 }
 
 .signup-btn {
+    display: block;
+    width: 160px;
     background-color: white;
     color: black;
     font-size: 20px;
     padding: 12px;
+    margin: 25px auto 0px auto;
     border-radius: 25px;
     text-decoration: none;
 }

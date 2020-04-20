@@ -9,6 +9,9 @@
     cursor: pointer;
     padding: 0;
     box-sizing: border-box;
+    position: fixed;
+    top: 15px;
+    left: 15px;
 }
 
 .toggle-button:focus {
