@@ -8,12 +8,10 @@ import SignupView from './SignupView/SignupView'
 import BillingView from './BillingView/BillingView'
 import FAQSupportView from './FAQSupportView/FAQSupportView'
 import ContactView from './ContactView/ContactView'
-import AddContact from './AddContact/AddContact'
-import ContactList from './ContactList/ContactList'
+import NotFoundMain from './NotFoundMain/NotFoundMain'
 import ContactsContext from './ContactsContext'
 import Logo from './Logo/Logo'
 import CCBNav from './CCBNav/CCBNav'
-import Nav from './Nav/Nav'
 
 class App extends Component {
   state = {
@@ -86,14 +84,6 @@ class App extends Component {
                 component={HomeView}
               />
               <Route
-                path='/contact-list'
-                component={ContactList}
-              />
-              <Route
-                path='/add-contact'
-                component={AddContact}
-              />
-              <Route
                 path='/signup'
                 component={SignupView}
               />
@@ -108,6 +98,9 @@ class App extends Component {
               <Route
                 path='/contact'
                 component={ContactView}
+              />
+              <Route 
+                component={NotFoundMain}
               />
             </Switch>
           </main>

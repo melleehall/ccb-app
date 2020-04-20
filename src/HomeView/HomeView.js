@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import bandwmnt from '../Images/bandwmnt.jpg'
 import mntlaptop from '../Images/mntlaptop.jpg'
 import './HomeView.css'
@@ -17,7 +18,7 @@ export default class HomeView extends Component {
                             <p>
                                 Construction begins next month!  Click below to request service now and join our mailing list to stay in the loop.
                             </p>
-                            <a href='#signup-desktop' id='signup-desktop' class='signup-btn' role='button' aria-pressed='false'>Sign Me Up</a>                 
+                            <Link to='/signup' id='signup-desktop' className='signup-btn' role='button' aria-pressed='false'>Sign Me Up</Link>                 
                     </section>  
                     </div> 
                 <section>
@@ -29,7 +30,7 @@ export default class HomeView extends Component {
                 </section>
                 <section>
                 <div className='img-container'>
-                    <img src={bandwmnt} alt='black and white mountains' class='img' />
+                    <img src={bandwmnt} alt='black and white mountains' className='img' />
                     <div className='mnt-txt'>FAST.  LOCAL. </div>
                 </div>
                 </section>
@@ -43,7 +44,7 @@ export default class HomeView extends Component {
                         We will update this website frequently to keep everyone aware of progress and updates.
                     </p>
                     <div className='img-container'>
-                        <img src={mntlaptop} alt='laptop with mountain background' class='img'/>
+                        <img src={mntlaptop} alt='laptop with mountain background' className='img'/>
                         <div className='mnt-txt'>
                          
                             ENJOY THE INTERNET SERVICES OF TODAY... & TOMORROW.

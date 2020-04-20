@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import { Link } from 'react-router-dom'
 import './DesktopNav.css'
 
 export default class DesktopNav extends Component {
@@ -7,11 +8,11 @@ export default class DesktopNav extends Component {
             <section className="topnav-desktop">
                 <div className='topnav-desktop-inner'>
                     <ul>
-                        <li><a href='#home-desktop' id='home-desktop'>Home</a></li>
-                        <li><a href='#signup-desktop' id='signup-desktop'>Signup</a></li>
-                        <li><a href='#billing-desktop' id='billing-desktop'>Billing</a></li>
-                        <li><a href='#service-desk-desktop' id='service-desk-desktop'>FAQ + Support</a></li>
-                        <li><a href='#contact-desktop' id='contact-desktop'>Contact</a></li>
+                        <li><Link to='/' id='home'>Home</Link></li>
+                        <li><Link to='/signup' id='signup'>Signup</Link></li>
+                        <li><Link to='/billing' id='billing'>Billing</Link></li>
+                        <li><Link to='/support' id='service-desk'>FAQ + Support</Link></li>
+                        <li><Link to='/contact' id='contact'>Contact</Link></li>
                     </ul>
                 </div>
             </section>

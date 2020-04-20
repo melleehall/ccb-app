@@ -8,12 +8,12 @@ import CCCProposedLIDMap08012018 from '../Images/CCC-Proposed-LID-Map-08-01-2018
 export default class FAQSupportView extends Component {
     render() {
         return (
-            <section class='support-view'>
+            <section className='support-view'>
                 <section>
-                    <h1 class='gray'>Need some help? We're here for you.</h1>
-                    <div class='support-btns flex-row'>
-                        <a href='#faq' class='signup-btn' role='button' aria-pressed='false'>FAQ</a>          
-                        <a href='#email' class='signup-btn' role='button' aria-pressed='false'>Contact</a>                
+                    <h1 className='gray'>Need some help? We're here for you.</h1>
+                    <div className='support-btns flex-row'>
+                        <a href='#faq' className='signup-btn' role='button' aria-pressed='false'>FAQ</a>          
+                        <a href='#email' className='signup-btn' role='button' aria-pressed='false'>Contact</a>                
                     </div>
                 </section>
                 <section className='FAQ'>
@@ -65,11 +65,11 @@ export default class FAQSupportView extends Component {
                             </p>
                         </li>
                     </ul>
-                    <img src={glasseslaptopphone} alt='glasses on top of laptop with smart phone' class='glasses-img' />
+                    <img src={glasseslaptopphone} alt='glasses on top of laptop with smart phone' className='glasses-img' />
                 </section>
                 <section>
-                    <h2 class='lightestgray' id='email'>Still have questions or need assistance? </h2>
-                    <p class='service-form-content lightestgray'>
+                    <h2 className='lightestgray' id='email'>Still have questions or need assistance? </h2>
+                    <p className='service-form-content lightestgray'>
                         Email us at <a href="mailto:support@clearcreekbroadband.com">support@clearcreekbroadband.com</a>.  
                         We look forward to assisting you!
                     </p>
