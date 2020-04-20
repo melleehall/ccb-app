@@ -6,7 +6,7 @@ h1 {
 
 .faq-list {
     text-align: left;
-    padding: 0px;
+    padding: 40px;
 }
 
 .faq-list li {
@@ -31,6 +31,9 @@ h1 {
 .support-btns {
     text-align: center;
     margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .support-btns a {
@@ -42,7 +45,8 @@ h1 {
     font-size: 16px;
     text-align: center;
     padding: 12px;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .glasses-img {

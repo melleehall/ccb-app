@@ -1,0 +1,130 @@
+.summary {
+    margin-top: 50px;
+}
+        
+.intro {
+    font-size: 25px;
+    text-align: center;
+}
+
+.intro-p {
+    margin: 0px;
+    padding: 0px;
+}
+
+p, ul {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.who-are-we {
+    margin-top: 180px;
+}
+
+.wires-img,
+.img,
+.mnt-laptop {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+}
+
+.img-container {
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    margin-top: 45px;
+}
+
+.glasses-img {
+    margin-top: 30px;
+}
+
+.mnt-txt {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.signup-btn {
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    padding: 12px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.signup-btn:hover {
+    cursor: pointer;
+    background: #434343;
+    letter-spacing: 1px;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.2s ease 0s;
+    color: white;
+}
+
+.who {
+    text-align: center;
+}
+
+.wires-container:after {
+    content:'';
+    background: url('../Images/wires.jpg') no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width:100%;
+    height:500px;
+    z-index:-1;
+    opacity: 0.3; 
+    border-radius: 0px;
+}
+
+.wires-container {
+    font-size: 20px;
+    color: black;
+    position: relative;
+    height:500px;
+    width:728;
+    padding:30px;
+    font-weight:550;
+    text-align:center;
+    margin-bottom: 30px;
+    height: 190px;
+}
+
+.latest {
+    font-size: 30px;
+    font-weight: 550;
+    height: 60px;
+    border: 2px black solid;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.block {
+    display: block;
+}
+
+.flex-col {
+    display: block;
+    height: 1600px;
+}
+
+/* Device = iPhone 5/SE */
+/* Screen = under 355px */
+
+@media (max-width: 355px) {
+    .wires-container p {
+        font-size: 18px;
+    }
+}

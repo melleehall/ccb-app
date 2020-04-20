@@ -25,26 +25,13 @@ export default class FAQSupportView extends Component {
                         </li>
                         <li>
                             <p className='faq-question'>How much will service cost?</p>
-                            <p className='faq-answer'>Currently, you can receive a special discount for your first year of service by prepaying.  
-                                Click <a href='#signup-desktop' id='signup-desktop' >HERE</a> to visit our "Signup" page for details. 
-                                Outside of this promotional period, service will cost $70.00 per month.
-                            </p>
-                        </li>
-                        <li>
-                            <p className='faq-question'>What is the deadline to sign up for the prepaid service offer?</p>
-                            <p className='faq-answer'> The prepaid service offer expires on April 15, 2020. </p>
-                        </li>
-                        <li>
-                            <p className='faq-question'>If I choose to opt in for the limited time prepaid service offer, is my deposit refundable?</p>
-                            <p className='faq-answer'>
-                                The deposit is fully refundable in the event that the network is not built and service cannot be offered for any reason.  Otherwise, the deposit is non-refundable.  
-                                A sample version of the receipt you will receive once payment is received for the prepaid offer is able for reference here:  <a href='DepositReceiptWM.pdf' target='_blank'> Sample Prepayment Receipt</a>
+                            <p className='faq-answer'>Service will cost $70.00 per month.
                             </p>
                         </li>
                         <li>
                             <p className='faq-question'>How can I stay updated on the network build and find out when service will be available in my area?</p>
-                            <p className='faq-answer'>Please, email us at <a href="mailto:support@clearcreekbroadband.com">support@clearcreekbroadband.com</a> to be added to our Network Update Distribution List.  
-                                You can also refer to the "Latest News" section of the "Home" page of this website for progress updates. 
+                            <p className='faq-answer'>Please, visit the <a href="www.clearcreekbroadband.com/signup">Signup Page</a> to subscribe to our mailing list.
+                                You can also refer to the "Latest News" section of the <a href="www.clearcreekbroadband.com/signup">Home Page</a> of this website for progress updates. 
                             </p>
                         </li>
                         <li>
@@ -55,6 +42,8 @@ export default class FAQSupportView extends Component {
                             <p className='faq-question'>What upload and download speeds will the network offer?</p>
                             <p className='faq-answer'>
                                 You can expect to see speeds of at least 50 Mbps download speed and 10 Mbps upload speed.  
+                            </p>
+                            <p className='faq-answer'>
                                 Download speed describes how quickly data is transferred from a server to your computer - examples of download activities include streaming a video on YouTube and loading a web page to read an article.
                                 Upload speed describes how quickly data is sent from you to others - examples of upload activities include sending images to a friend via email or posting a comment to Facebook.
                                 Clear Creek County's existing internet provider offers 1.5 Mbps download and 0.75 Mbps upload speeds.  With CCB's network, you can expect 33 times faster download and 13 times faster upload speeds.
@@ -64,6 +53,8 @@ export default class FAQSupportView extends Component {
                             <p className='faq-question'>Can I see a map of the proposed broadband service area?</p>
                             <p className='faq-answer'>
                                 Yes! To view a current version of the service area map, please click here: <a href={CCCProposedLIDMap08012018} target='_blank' rel="noopener noreferrer">Proposed Broadband Service Area Map</a>
+                            </p>
+                            <p className='faq-answer'>
                                 The service areas include Old Squaw Pass, Echo Hills, Upper Witter Gulch, Lower Witter Gulch/Circle K, and Golden Willow/Yankee Creek.
                             </p>
                         </li>
