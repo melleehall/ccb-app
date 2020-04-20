@@ -11,34 +11,20 @@ import ContactView from './ContactView/ContactView'
 import NotFoundMain from './NotFoundMain/NotFoundMain'
 import ContactsContext from './ContactsContext'
 import Logo from './Logo/Logo'
-import CCBNav from './CCBNav/CCBNav'
+import Nav from './Nav/Nav'
+import SideDrawer from './SideDrawer/SideDrawer'
+import Backdrop from './Backdrop/Backdrop'
 
 class App extends Component {
   state = {
     contacts: [],
     error: null,
+    sideDrawerOpen: false
   };
-
-  setContacts = contacts => {
-    this.setState({
-      contacts,
-      error: null,
-    })
-  }
 
   addContact = contact => {
     this.setState({
       contacts: [ ...this.state.contacts, contact ],
-    })
-  }
-
-  deleteContact = contactId => {
-    console.log(contactId)
-    const newContacts = this.state.contacts.filter(contact =>
-      contact.id !== contactId
-    )
-    this.setState({
-      contacts: newContacts
     })
   }
 
@@ -60,7 +46,23 @@ class App extends Component {
       .catch(error => this.setState({ error }))
   }
 
+  drawerToggleClickHandler = () => {
+    this.setState((prevState) => {
+      return {sideDrawerOpen: !prevState.sideDrawerOpen};
+    });
+  };
+
+  backdropClickHandler = () => {
+    this.setState({sideDrawerOpen: false});
+  };
+
   render() {
+    let backdrop;
+
+    if (this.state.sideDrawerOpen) {
+      backdrop = <Backdrop click={this.backdropClickHandler} />
+    }
+
     const contextValue = {
       contacts: this.state.contacts,
       addContact: this.addContact,
@@ -69,9 +71,11 @@ class App extends Component {
 
     return (
       <section className='App'>
-        <nav className='App_nav'>
-            <CCBNav />
-        </nav>
+        <div className='App_nav'>
+            <Nav drawerClickHandler={this.drawerToggleClickHandler} />
+            <SideDrawer show={this.state.sideDrawerOpen} />
+            {backdrop}
+        </div>
         <header>
           <div><Logo /></div>
         </header>
