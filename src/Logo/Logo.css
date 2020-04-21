@@ -1,0 +1,30 @@
+.logo {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin: 70px auto 30px auto;
+} 
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+/* Device = Tablets, Ipads (portrait) */
+/* Screen = B/w 768px to 1024px */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .logo {
+        width: 60%;
+        height: auto;
+    } 
+}
+
+@media (min-width: 1025px) {
+    .logo {
+        width: 70%;
+        height: auto;
+    } 
+}

@@ -1,51 +1,30 @@
-import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
-import AddBookmark from './AddBookmark/AddBookmark';
-import BookmarkList from './BookmarkList/BookmarkList';
-import Nav from './Nav/Nav';
-import config from './config';
-import './App.css';
+import React, { Component } from 'react'
+import { Route, Switch } from 'react-router-dom'
+import config from './config'
+import './App.css'
 
-const bookmarks = [
-  {
-    id: 0,
-    title: 'Google',
-    url: 'http://www.google.com',
-    rating: '3',
-    desc: 'Internet-related services and products.'
-  },
-  {
-    id: 1,
-    title: 'Thinkful',
-    url: 'http://www.thinkful.com',
-    rating: '5',
-    desc: '1-on-1 learning to accelerate your way to a new high-growth tech career!'
-  },
-  {
-    id: 2,
-    title: 'Github',
-    url: 'http://www.github.com',
-    rating: '4',
-    desc: 'brings together the world\'s largest community of developers.'
-  }
-];
+import HomeView from './HomeView/HomeView'
+import SignupView from './SignupView/SignupView'
+import BillingView from './BillingView/BillingView'
+import FAQSupportView from './FAQSupportView/FAQSupportView'
+import ContactView from './ContactView/ContactView'
+import NotFoundMain from './NotFoundMain/NotFoundMain'
+import ContactsContext from './ContactsContext'
+import Logo from './Logo/Logo'
+import Nav from './Nav/Nav'
+import SideDrawer from './SideDrawer/SideDrawer'
+import Backdrop from './Backdrop/Backdrop'
 
 class App extends Component {
   state = {
-    bookmarks,
+    contacts: [],
     error: null,
+    sideDrawerOpen: false
   };
 
-  setBookmarks = bookmarks => {
+  addContact = contact => {
     this.setState({
-      bookmarks,
-      error: null,
-    })
-  }
-
-  addBookmark = bookmark => {
-    this.setState({
-      bookmarks: [ ...this.state.bookmarks, bookmark ],
+      contacts: [ ...this.state.contacts, contact ],
     })
   }
 
@@ -63,34 +42,74 @@ class App extends Component {
         }
         return res.json()
       })
-      .then(this.setBookmarks)
+      .then(this.setContacts)
       .catch(error => this.setState({ error }))
   }
 
+  drawerToggleClickHandler = () => {
+    this.setState((prevState) => {
+      return {sideDrawerOpen: !prevState.sideDrawerOpen};
+    });
+  };
+
+  backdropClickHandler = () => {
+    this.setState({sideDrawerOpen: false});
+  };
+
   render() {
-    const { bookmarks } = this.state
+    let backdrop;
+
+    if (this.state.sideDrawerOpen) {
+      backdrop = <Backdrop click={this.backdropClickHandler} />
+    }
+
+    const contextValue = {
+      contacts: this.state.contacts,
+      addContact: this.addContact,
+      deleteContact: this.deleteContact,
+    }
+
     return (
-      <main className='App'>
-        <h1>Bookmarks!</h1>
-        <Nav />
-        <div className='content' aria-live='polite'>
-            <Route path='/add-bookmark'
-              render={({ history }) => {
-              console.log(history)
-              return <AddBookmark
-                onAddBookmark={this.addBookmark}
-                onClickCancel={() => {history.push('/')}}
-            />
-          }}
-        />
-          <Route exact path='/'
-            render={() => 
-              <BookmarkList
-                bookmarks={bookmarks}
-            />}
-          />
+      <section className='App'>
+        <div className='App_nav'>
+            <Nav drawerClickHandler={this.drawerToggleClickHandler} />
+            <SideDrawer show={this.state.sideDrawerOpen} />
+            {backdrop}
         </div>
-      </main>
+        <header>
+          <div><Logo /></div>
+        </header>
+        <ContactsContext.Provider value={contextValue}>
+          <main className='content' aria-live='polite'>
+            <Switch>
+              <Route
+                exact
+                path='/'
+                component={HomeView}
+              />
+              <Route
+                path='/signup'
+                component={SignupView}
+              />
+              <Route
+                path='/billing'
+                component={BillingView}
+              />
+              <Route
+                path='/support'
+                component={FAQSupportView}
+              />
+              <Route
+                path='/contact'
+                component={ContactView}
+              />
+              <Route 
+                component={NotFoundMain}
+              />
+            </Switch>
+          </main>
+        </ContactsContext.Provider>
+      </section>
     );
   }
 }

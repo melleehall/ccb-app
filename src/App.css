@@ -1,9 +1,7 @@
 .App {
   text-align: center;
   height: 100%;
-  margin: 10px auto;
-  padding: 5px;
-  max-width: 560px;
+  margin: 0px;
   color: #444;
 }
 
@@ -22,10 +20,30 @@ button {
   border-radius: 4px;
 }
 
-@media screen and (min-width: 460px) {
-  body,
-  input,
-  textarea {
-    font-size: 1.1em;
+.content{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Device = Tablets, Ipads (portrait) */
+/* Screen = B/w 768px to 1024px */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main-container {
+      width: 60%;
+      background-color: red;
   }
 }
+
+/* Device = Laptops, Desktops */
+/* Screen = 1025px and up
+*/
+
+@media (min-width: 1025px) {
+  .main-container {
+      width: 60%;
+  }
+}
+
