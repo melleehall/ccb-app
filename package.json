@@ -8,16 +8,11 @@
     "react": "^16.6.3",
     "react-bootstrap": "^1.0.0",
     "react-dom": "^16.6.3",
-<<<<<<< HEAD
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "2.1.1"
-=======
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
     "react-uuid": "^1.0.2",
     "typeface-montserrat": "0.0.75",
     "uuid": "^7.0.3"
->>>>>>> conversion-to-ccb
   },
   "scripts": {
     "start": "react-scripts start",
