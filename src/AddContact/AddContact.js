@@ -33,7 +33,6 @@ class AddContact extends Component {
       request_service: this.state.request_service,
       request_news: this.state.request_news
     }
-    console.log(contact)
     this.setState({ error: null })
     fetch(config.API_ENDPOINT, {
       method: 'POST',
@@ -65,7 +64,6 @@ class AddContact extends Component {
         this.context.addContact(data)
       })
       .catch(error => {
-        console.log(error)
         this.setState({ error })
       })
   }
