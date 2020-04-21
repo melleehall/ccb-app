@@ -76,8 +76,9 @@ class App extends Component {
             <SideDrawer show={this.state.sideDrawerOpen} />
             {backdrop}
         </div>
+        <div className='main-container'>
         <header>
-          <div><Logo /></div>
+          <Logo />
         </header>
         <ContactsContext.Provider value={contextValue}>
           <main className='content' aria-live='polite'>
@@ -109,6 +110,7 @@ class App extends Component {
             </Switch>
           </main>
         </ContactsContext.Provider>
+        </div>
       </section>
     );
   }

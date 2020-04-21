@@ -17,14 +17,14 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .logo {
-        width: 60%;
+        width: 50%;
         height: auto;
     } 
 }
 
 @media (min-width: 1025px) {
     .logo {
-        width: 70%;
+        width: 50%;
         height: auto;
     } 
 }

@@ -1,4 +1,7 @@
-
+.summary { 
+    width: 100%;
+    margin: 0px;
+}
 
 .billing-view {
     margin-top: 0px;

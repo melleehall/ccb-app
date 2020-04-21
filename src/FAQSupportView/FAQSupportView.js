@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 import './FAQSupportView.css'
 import '../universalstyles.css'
 import glasseslaptopphone from '../Images/glasseslaptopphone.jpg'
@@ -30,8 +31,8 @@ export default class FAQSupportView extends Component {
                         </li>
                         <li>
                             <p className='faq-question'>How can I stay updated on the network build and find out when service will be available in my area?</p>
-                            <p className='faq-answer'>Please, visit the <a href="www.clearcreekbroadband.com/signup">Signup Page</a> to subscribe to our mailing list.
-                                You can also refer to the "Latest News" section of the <a href="www.clearcreekbroadband.com/signup">Home Page</a> of this website for progress updates. 
+                            <p className='faq-answer'>Please, visit the <NavLink to='/signup'>Signup Page</NavLink> to subscribe to our mailing list.
+                                You can also refer to the "Latest News" section of the <NavLink to='/'>Home Page</NavLink> of this website for progress updates. 
                             </p>
                         </li>
                         <li>
