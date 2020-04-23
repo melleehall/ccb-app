@@ -22,11 +22,11 @@ export default class FAQSupportView extends Component {
                     <ul className='faq-list lightestgray'>
                         <li>
                             <p className='faq-question'>When will the network be built?</p>
-                            <p className='faq-answer'>Build-out of the network will begin this spring with service starting to be offered in the fall of 2020.</p>
+                            <p className='faq-answer'>We are working hard to bring service in as quickly as possible - as soon as the fall of 2020 and no later than the spring of 2021.</p>
                         </li>
                         <li>
                             <p className='faq-question'>How much will service cost?</p>
-                            <p className='faq-answer'>Service will cost $70.00 per month.
+                            <p className='faq-answer'>Service will cost $70.00 per month.  No additional fees or taxes will be charged.
                             </p>
                         </li>
                         <li>
@@ -47,7 +47,7 @@ export default class FAQSupportView extends Component {
                             <p className='faq-answer'>
                                 Download speed describes how quickly data is transferred from a server to your computer - examples of download activities include streaming a video on YouTube and loading a web page to read an article.
                                 Upload speed describes how quickly data is sent from you to others - examples of upload activities include sending images to a friend via email or posting a comment to Facebook.
-                                Clear Creek County's existing internet provider offers 1.5 Mbps download and 0.75 Mbps upload speeds.  With CCB's network, you can expect 33 times faster download and 13 times faster upload speeds.
+                                Eastern Clear Creek County's existing internet provider offers 1.5 Mbps download and 0.75 Mbps upload speeds.  With CCB's network, you can expect 33 times faster download and 13 times faster upload speeds.
                             </p>
                         </li>
                         <li>

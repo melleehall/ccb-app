@@ -13,10 +13,10 @@ export default class HomeView extends Component {
                         <section className='intro-p'>
                             <h2 className='latest'>Latest News</h2>
                             <p>
-                                Friends and neighbors, high-speed internet is coming to Clear Creek County.
+                                Friends and neighbors, high-speed internet is coming to Eastern Clear Creek County.
                             </p>
                             <p>
-                                Construction begins next month!  Click below to request service now and join our mailing list to stay in the loop.
+                                We are currently in need of volunteers to help us gather emails and phone numbers for all properties.
                             </p>
                             <Link to='/signup' id='signup-desktop' className='signup-btn' role='button' aria-pressed='false'>Sign Me Up</Link>                 
                     </section>  
@@ -24,7 +24,7 @@ export default class HomeView extends Component {
                 <section>
                     <h2 className='lightestgray who-are-we block'>Who are we?</h2>
                     <p className='summary lightestgray block'>
-                        Clear Creek Broadband (CCB) is a local internet service company dedicated to providing our neighbors in eastern Clear Creek County with access to a highspeed broadband connection. 
+                        Clear Creek Broadband (CCB) is a local internet service company dedicated to providing our neighbors in Eastern Clear Creek County with access to a highspeed broadband connection. 
                         Our fixed wireless broadband network will provide the speeds and local support to make each of our homes ready for the internet services of today and tomorrow. 
                     </p>
                 </section>
@@ -37,10 +37,8 @@ export default class HomeView extends Component {
                 <section>
                     <h2 className='lightestgray'>Network Status</h2>
                     <p className='lightestgray summary'>
-                        CCB has completed all of the documents necessary to begin deploying the network.
-                        We are now finalizing contracts with property owners for access points and easement where necessary.  
-                        We will begin construction in the spring of 2020 and the complete build-out will take 12-18 months.  
-                        Service will begin being offered in the fall of 2020. 
+                        The CCB Team is working hard to bring service in as quickly as possible - as soon as the fall of 2020 and no later than the spring of 2021.
+                        You can now visit our <Link to='/signup'>Signup Page</Link> to request service which helps us to better understand and plan for demand in each region.
                         We will update this website frequently to keep everyone aware of progress and updates.
                     </p>
                     <div className='img-container'>
