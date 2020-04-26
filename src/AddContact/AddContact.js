@@ -13,7 +13,8 @@ class AddContact extends Component {
   state = {
     error: null,
     request_service: false,
-    request_news: false
+    request_news: false,
+    volunteer: false
   };
 
   handleSubmit = e => {
@@ -31,7 +32,8 @@ class AddContact extends Component {
       city: city.value,
       zip: zip.value,
       request_service: this.state.request_service,
-      request_news: this.state.request_news
+      request_news: this.state.request_news,
+      volunteer: this.state.volunteer
     }
     this.setState({ error: null })
     fetch(config.API_ENDPOINT, {
@@ -81,6 +83,12 @@ class AddContact extends Component {
   toggleReqNews= () => {
     this.setState(prevState => ({
       request_news: !prevState.request_news,
+    }));
+  }
+
+  toggleReqNews= () => {
+    this.setState(prevState => ({
+      volunteer: !prevState.volunteer,
     }));
   }
 
@@ -238,6 +246,18 @@ class AddContact extends Component {
                   checked={this.state.request_news}
                   onChange={this.toggleReqNews}
                   id='request_news'
+                />
+              </div>
+              <div className='flex-row'>
+                <label htmlFor='volunteer'>
+                  Volunteer to Spread the Word
+                </label>
+                <input
+                  type='checkbox'
+                  name='volunteer'
+                  checked={this.state.request_news}
+                  onChange={this.toggleReqNews}
+                  id='volunteer'
                 />
               </div>
             </fieldset>
