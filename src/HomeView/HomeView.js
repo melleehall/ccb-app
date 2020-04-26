@@ -10,7 +10,7 @@ export default class HomeView extends Component {
         return (
             <section className='landing-view flex-col'>
                     <section className='lightestgray'>
-                        <p>
+                        <p className='friends-neighbors'>
                             Friends and neighbors, high-speed internet is coming to Eastern Clear Creek County.
                         </p>
                     </section>
