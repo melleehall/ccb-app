@@ -65,15 +65,16 @@ class AddContact extends Component {
         streetname.value = ''
         city.value = ''
         zip.value = ''
+        this.setState({
+          request_service: false,
+          request_news: false,
+          volunteer: false
+        })
         this.context.addContact(data)
       })
       .catch(error => {
         this.setState({ error })
       })
-  }
-
-  handleClickCancel = () => {
-    this.props.history.push('/')
   }
 
   toggleReqService= () => {
@@ -264,10 +265,6 @@ class AddContact extends Component {
               </div>
             </fieldset>
             <div className='AddBookmark__buttons'>
-              <button type='button' onClick={this.handleClickCancel}>
-                Cancel
-              </button>
-              {' '}
               <button type='submit'>
                 Save
               </button>
