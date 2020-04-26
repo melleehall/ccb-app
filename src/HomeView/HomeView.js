@@ -20,8 +20,8 @@ export default class HomeView extends Component {
                         <p>
                             We are currently in need of volunteers in each of the five service regions to help us by contacting residents and gathering emails and phone numbers.
                         </p>
-                        <p>
-                            Visit our Signup page or email us at <a href='mailto:volunteers@clearcreekbroadband.com?subject=Clear Creek Broadband Volunteer Opportunity'>volunteers@clearcreekbroadband.com</a>.
+                        <p className='volunteer-p'>
+                            Visit our Signup page or email us at <a href='mailto:volunteers@clearcreekbroadband.com?subject=Clear Creek Broadband Volunteer Opportunity'>volunteers@clearcreekbroadband.com</a>
                         </p>
                         <Link to='/signup' id='signup-desktop' className='signup-btn' role='button' aria-pressed='false'>Sign Me Up</Link>                 
                     </section>  

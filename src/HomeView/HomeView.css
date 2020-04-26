@@ -136,3 +136,18 @@ h2.lightestgray {
         font-size: 18px;
     }
 }
+
+/* Preventing volunteers email from text-wrap on small screens */
+
+@media (max-width: 355px) {
+    .volunteer-p a {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 356px) and (max-width: 455px) {
+    .volunteer-p a {
+        font-size: 14px;
+    }
+}
+
