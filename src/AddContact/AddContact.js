@@ -86,7 +86,7 @@ class AddContact extends Component {
     }));
   }
 
-  toggleReqNews= () => {
+  toggleVolunteer = () => {
     this.setState(prevState => ({
       volunteer: !prevState.volunteer,
     }));
@@ -255,8 +255,8 @@ class AddContact extends Component {
                 <input
                   type='checkbox'
                   name='volunteer'
-                  checked={this.state.request_news}
-                  onChange={this.toggleReqNews}
+                  checked={this.state.volunteer}
+                  onChange={this.toggleVolunteer}
                   id='volunteer'
                 />
               </div>
