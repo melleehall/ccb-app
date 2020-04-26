@@ -35,6 +35,8 @@ class AddContact extends Component {
       request_news: this.state.request_news,
       volunteer: this.state.volunteer
     }
+    console.log(contact)
+    
     this.setState({ error: null })
     fetch(config.API_ENDPOINT, {
       method: 'POST',

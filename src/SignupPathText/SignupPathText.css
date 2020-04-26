@@ -39,3 +39,8 @@
 .signup-subhead {
     color: black;
 }
+
+.bold {
+    font-weight: 700;
+    display: inline;
+}
