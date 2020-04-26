@@ -9,16 +9,21 @@ export default class HomeView extends Component {
     render() {
         return (
             <section className='landing-view flex-col'>
+                    <section className='lightestgray'>
+                        <p>
+                            Friends and neighbors, high-speed internet is coming to Eastern Clear Creek County.
+                        </p>
+                    </section>
                     <div className='wires-container block'>
-                        <section className='intro-p'>
-                            <h2 className='latest'>Latest News</h2>
-                            <p>
-                                Friends and neighbors, high-speed internet is coming to Eastern Clear Creek County.
-                            </p>
-                            <p>
-                                We are currently in need of volunteers to help us gather emails and phone numbers for all properties.
-                            </p>
-                            <Link to='/signup' id='signup-desktop' className='signup-btn' role='button' aria-pressed='false'>Sign Me Up</Link>                 
+                    <section className='intro-p'>
+                        <h2 className='latest'>Latest News</h2>
+                        <p>
+                            We are currently in need of volunteers in each of the five service regions to help us by contacting residents and gathering emails and phone numbers.
+                        </p>
+                        <p>
+                            Visit our Signup page or email us at <a href='mailto:volunteers@clearcreekbroadband.com?subject=Clear Creek Broadband Volunteer Opportunity'>volunteers@clearcreekbroadband.com</a>.
+                        </p>
+                        <Link to='/signup' id='signup-desktop' className='signup-btn' role='button' aria-pressed='false'>Sign Me Up</Link>                 
                     </section>  
                     </div> 
                 <section>
