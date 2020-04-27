@@ -44,3 +44,7 @@
     font-weight: 700;
     display: inline;
 }
+
+p {
+    overflow-wrap: break-word;
+}
