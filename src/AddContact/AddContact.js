@@ -37,12 +37,13 @@ class AddContact extends Component {
     }
     
     this.setState({ error: null })
-    fetch(config.API_BASE_URL, {
+    console.log(`${config.API_BASE_URL}/api/contacts`)
+    fetch(`${config.API_BASE_URL}/api/contacts`, {
       method: 'POST',
       body: JSON.stringify(contact),
       headers: {
         'content-type': 'application/json',
-        'authorization': `bearer ${config.API_KEY}`
+        // 'authorization': `bearer ${config.API_KEY}`
       }
     })
       .then(res => {
