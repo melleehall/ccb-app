@@ -37,7 +37,7 @@ class AddContact extends Component {
     }
     
     this.setState({ error: null })
-    fetch(config.API_ENDPOINT, {
+    fetch(config.API_BASE_URL, {
       method: 'POST',
       body: JSON.stringify(contact),
       headers: {
