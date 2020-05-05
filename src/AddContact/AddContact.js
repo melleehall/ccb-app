@@ -1,5 +1,4 @@
 import React, { Component } from  'react'
-import ContactsContext from '../ContactsContext'
 import config from '../config'
 import './AddContact.css'
 
@@ -8,8 +7,6 @@ const Required = () => (
 )
 
 class AddContact extends Component {
-  static contextType = ContactsContext;
-
   state = {
     error: null,
     request_service: false,
@@ -69,7 +66,6 @@ class AddContact extends Component {
           request_news: false,
           volunteer: false
         })
-        this.context.addContact(data)
       })
       .catch(error => {
         this.setState({ error })
