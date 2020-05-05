@@ -6,12 +6,13 @@ const Required = () => (
   <span className='AddBookmark__required'>*</span>
 )
 
-class AddContact extends Component {
+export default class AddContact extends Component {
   state = {
     error: null,
     request_service: false,
     request_news: false,
-    volunteer: false
+    volunteer: false,
+    success_msg: false
   };
 
   handleSubmit = e => {
@@ -65,6 +66,9 @@ class AddContact extends Component {
           request_service: false,
           request_news: false,
           volunteer: false
+        })
+        this.setState({
+          success_msg: true
         })
       })
       .catch(error => {
@@ -264,6 +268,9 @@ class AddContact extends Component {
                 Save
               </button>
             </div>
+            <p className='success_msg'>
+              <b>{this.state.success_msg ? 'Your contact information was successfully submitted.  Thank you!' : '' }</b> 
+            </p>
           </form>
         </section>
       </section>
@@ -271,4 +278,3 @@ class AddContact extends Component {
   }
 }
 
-export default AddContact;
