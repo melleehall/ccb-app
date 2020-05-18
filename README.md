@@ -1,18 +1,31 @@
 <h1>CCB React Client<h1>
 
-* Live Client: https://ccb-app.now.sh/
-* Live Application: www.clearcreekbroadband.com
+* Live Website: https://ccb-app.now.sh/
 
 ## Description
 
 Clear Creek Broadband (CCB) is a local internet service company dedicated to providing their neighbors in Eastern Clear Creek County (outside of Denver, CO) with access to a highspeed broadband connection. The purpose of this application is to be informative and to provide an easy channel for users to request service, join the mailing list to stay informed, and/or volunteer to help CCB with projects.
 
+## Screenshots
 
-## Built With
+Landing Page Description:
 
-* This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-* JavaScript ES6 / jQuery
+![dashboard stats](Screengrabs/LandingPageDescription.png)
+
+Mobile Navigation:
+
+![navigation](Screengrabs/MobileNav.png)
+
+Signup Form:
+
+![signup page](Screengrabs/SignupPage.png)
+
+
+## Technology
+
+* React
+* JavaScript
 * HTML5
 * CSS3
-
+* Testing: Jest
 
