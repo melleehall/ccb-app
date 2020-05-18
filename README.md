@@ -10,15 +10,15 @@ Clear Creek Broadband (CCB) is a local internet service company dedicated to pro
 
 Landing Page Description:
 
-![dashboard stats](Screengrabs/LandingPageDescription.png)
+![landing page description](Screengrabs/LandingPageDescription.png)
 
 Mobile Navigation:
 
-![navigation](Screengrabs/MobileNav.png)
+![mobile navigation](Screengrabs/MobileNav.png)
 
 Signup Form:
 
-![signup page](Screengrabs/SignupPage.png)
+![signup form](Screengrabs/SignupPage.png)
 
 
 ## Technology
