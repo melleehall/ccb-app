@@ -1,34 +1,151 @@
 import React, { Component } from  'react'
+import ValidationError from '../ValidationError/ValidationError'
 import config from '../config'
 import './AddContact.css'
-
-const Required = () => (
-  <span className='AddBookmark__required'>*</span>
-)
 
 export default class AddContact extends Component {
   state = {
     error: null,
+    firstname: {
+      value: '',
+      touched: false
+    },
+    lastname: {
+      value: '',
+      touched: false
+    },
+    email: {
+      value: '',
+      touched: false
+    },
+    phone: {
+      value: '',
+      touched: false
+    },
+    streetnum: {
+      value: '',
+      touched: false
+    },
+    streetname: {
+      value: '',
+      touched: false
+    },
+    city: {
+      value: '',
+      touched: false
+    },
+    zip: {
+      value: '',
+      touched: false
+    },
     request_service: false,
     request_news: false,
     volunteer: false,
     success_msg: false
   };
 
-  handleSubmit = e => {
-    e.preventDefault()
-    // get the form fields from the event
-    const { firstname, lastname, email, phone, streetnum, streetname, city, zip } = e.target
+  updateFirstname(firstname) {
+    this.setState({ firstname: { value: firstname, touched: true }});
+  }
+
+  updateLastname(lastname) {
+    this.setState({ lastname: { value: lastname, touched: true }});
+  }
+
+  updateEmail(email) {
+    this.setState({ email: { value: email, touched: true }});
+  }
+
+  updatePhone(phone) {
+    this.setState({ phone: { value: phone, touched: true }});
+  }
+
+  updateStreetnum(streetnum) {
+    this.setState({ streetnum: { value: streetnum, touched: true }});
+  }
+
+  updateStreetname(streetname) {
+    this.setState({ streetname: { value: streetname, touched: true }});
+  }
+
+  updateCity(city) {
+    this.setState({ city: { value: city, touched: true }});
+  }
+
+  updateZip(zip) {
+    this.setState({ zip: { value: zip, touched: true }});
+  }
+
+  validateFirstname() {
+    const firstname = this.state.firstname.value.trim();
+    if (firstname.length === 0) {
+        return 'First name is required';
+    }  
+  }
+
+  validateLastname() {
+    const lastname = this.state.lastname.value.trim();
+    if (lastname.length === 0) {
+        return 'Last name is required';
+    }  
+  }
+
+  validateEmail() {
+    const email = this.state.email.value.trim();
+    if (email.length === 0) {
+        return 'Email is required';
+    }  
+  }
+
+  validatePhone() {
+    const phone = this.state.phone.value.trim();
+    if (phone.length === 0) {
+        return 'Phone is required';
+    }  
+  }
+
+  validateStreetnum() {
+    const streetnum = this.state.streetnum.value.trim();
+    if (streetnum.length === 0) {
+        return 'Street number is required';
+    }  else if (isNaN(streetnum)) {
+        return 'Must be a number';
+    }
+  }
+
+  validateStreetname() {
+    const streetname = this.state.streetname.value.trim();
+    if (streetname.length === 0) {
+        return 'Street name is required';
+    }  
+  }
+
+  validateCity() {
+    const city = this.state.city.value.trim();
+    if (city.length === 0) {
+        return 'City is required';
+    }  
+  }
+
+  validateZip() {
+    const zip = this.state.zip.value.trim();
+    if (zip.length === 0) {
+        return 'Zipcode is required';
+    }  
+  }
+
+  handleSubmit (event) {
+    event.preventDefault()
 
     const contact = {
-      firstname: firstname.value,
-      lastname: lastname.value,
-      email: email.value,
-      phone: phone.value,
-      streetnum: streetnum.value,
-      streetname: streetname.value,
-      city: city.value,
-      zip: zip.value,
+      firstname: event.target['firstname'].value,
+      lastname: event.target['lastname'].value,
+      email: event.target['email'].value,
+      phone: event.target['phone'].value,
+      streetnum: event.target['streetnum'].value,
+      streetname: event.target['streetname'].value,
+      city: event.target['city'].value,
+      zip: event.target['zip'].value,
       request_service: this.state.request_service,
       request_news: this.state.request_news,
       volunteer: this.state.volunteer
@@ -37,37 +154,32 @@ export default class AddContact extends Component {
     this.setState({ error: null })
     fetch(`${config.API_BASE_URL}/api/contacts`, {
       method: 'POST',
-      body: JSON.stringify(contact),
       headers: {
-        'content-type': 'application/json',
-        // 'authorization': `bearer ${config.API_KEY}`
-      }
+        'content-type': 'application/json',      
+      },
+      body: JSON.stringify(contact)
     })
       .then(res => {
         if (!res.ok) {
-          // get the error message from the response,
           return res.json().then(error => {
-            // then throw it
             throw error
           })
         }
         return res.json()
       })
       .then(data => {
-        firstname.value = ''
-        lastname.value = ''
-        email.value = ''
-        phone.value = ''
-        streetnum.value = ''
-        streetname.value = ''
-        city.value = ''
-        zip.value = ''
         this.setState({
+          firstname: {value: ''},
+          lastname: {value: ''},
+          email: {value: ''},
+          phone: {value: ''},
+          streenum: {value: ''},
+          streetname: {value: ''},
+          city: {value: ''},
+          zip: {value: ''},
           request_service: false,
           request_news: false,
-          volunteer: false
-        })
-        this.setState({
+          volunteer: false,
           success_msg: true
         })
       })
@@ -95,14 +207,22 @@ export default class AddContact extends Component {
   }
 
   render() {
-    const { error } = this.state
+    const { error } = this.state;
+    const firstnameError = this.validateFirstname();
+    const lastnameError = this.validateLastname();    
+    const emailError = this.validateEmail();
+    const phoneError = this.validatePhone();
+    const streetnumError = this.validateStreetnum();
+    const streetnameError = this.validateStreetname();
+    const cityError = this.validateCity();
+    const zipError = this.validateZip();
     
     return (
       <section>
         <section className='AddBookmark'>
           <form
             className='AddBookmark__form'
-            onSubmit={this.handleSubmit}
+            onSubmit={(e) => this.handleSubmit(e)}
           >
             <h2>Sign Up Today</h2>
             <div className='AddBookmark__error' role='alert'>
@@ -113,57 +233,69 @@ export default class AddContact extends Component {
                 <label htmlFor='firstname'>
                   First Name
                   {' '}
-                  <Required />
                 </label>
                 <input
                   type='text'
                   name='firstname'
                   id='firstname'
                   placeholder='Josey'
-                  required
+                  required aria-required="true"
+                  onChange={e => this.updateFirstname(e.target.value)} 
                 />
+                <span>
+                  {this.state.firstname.touched && <ValidationError  message={firstnameError} />}
+                </span>
               </div>
               <div>
                 <label htmlFor='lastname'>
                   Last Name
                   {' '}
-                  <Required />
                 </label>
                 <input
                   type='text'
                   name='lastname'
                   id='lastname'
                   placeholder='Johnson'
-                  required
+                  required aria-required="true"
+                  onChange={e => this.updateLastname(e.target.value)} 
                 />
+                <span>
+                  {this.state.lastname.touched && <ValidationError  message={lastnameError} />}
+                </span>
               </div>
               <div>
                 <label htmlFor='email'>
                   Email Address
                   {' '}
-                  <Required />
                 </label>
                 <input
-                  type='text'
+                  type='email'
                   name='email'
                   id='email'
                   placeholder='myemail@gmail.com'
-                  required
+                  required aria-required="true"
+                  onChange={e => this.updateEmail(e.target.value)} 
                 />
+                <span>
+                  {this.state.email.touched && <ValidationError  message={emailError} />}
+                </span>
               </div>
               <div>
                 <label htmlFor='phone'>
                   Phone Number
                   {' '}
-                  <Required />
                 </label>
                 <input
                   type='text'
                   name='phone'
                   id='phone'
                   placeholder='(303)-123-4567'
-                  required
+                  required aria-required="true"
+                  onChange={e => this.updatePhone(e.target.value)} 
                 />
+                <span>
+                  {this.state.phone.touched && <ValidationError  message={phoneError} />}
+                </span>
               </div>
             </fieldset>
             <fieldset className='address'>
@@ -171,57 +303,69 @@ export default class AddContact extends Component {
                 <label htmlFor='streetnum'>
                   Street Number
                   {' '}
-                  <Required />
                 </label>
                 <input
                   type='text'
                   name='streetnum'
                   id='streetnum'
                   placeholder='123'
-                  required
+                  required aria-required="true"
+                  onChange={e => this.updateStreetnum(e.target.value)} 
                 />
+                <span>
+                  {this.state.streetnum.touched && <ValidationError  message={streetnumError} />}
+                </span>
               </div>
               <div>
                 <label htmlFor='streetname'>
                   Street Name
                   {' '}
-                  <Required />
                 </label>
                 <input
                   type='text'
                   name='streetname'
                   id='streetname'
                   placeholder='Frog Road'
-                  required
+                  required aria-required="true"
+                  onChange={e => this.updateStreetname(e.target.value)} 
                 />
+                <span>
+                  {this.state.streetname.touched && <ValidationError  message={streetnameError} />}
+                </span>
               </div>
               <div>
                 <label htmlFor='city'>
                   City
                   {' '}
-                  <Required />
                 </label>
                 <input
                   type='text'
                   name='city'
                   id='city'
                   placeholder='Evergreen'
-                  required
+                  required aria-required="true"
+                  onChange={e => this.updateCity(e.target.value)} 
                 />
+                <span>
+                  {this.state.city.touched && <ValidationError  message={cityError} />}
+                </span>
               </div>
               <div>
                 <label htmlFor='zip'>
                   Zipcode
                   {' '}
-                  <Required />
                 </label>
                 <input
                   type='text'
                   name='zip'
                   id='zip'
                   placeholder='97531'
-                  required
+                  required aria-required="true"
+                  onChange={e => this.updateZip(e.target.value)} 
                 />
+                <span>
+                  {this.state.zip.touched && <ValidationError  message={zipError}/>}
+                </span>
               </div>
             </fieldset>
             <fieldset className='signup_options'>
