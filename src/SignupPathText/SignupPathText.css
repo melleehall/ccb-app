@@ -38,6 +38,7 @@
 
 .signup-subhead {
     color: black;
+    font-weight: 700px;
 }
 
 .bold {
@@ -47,4 +48,51 @@
 
 p {
     overflow-wrap: break-word;
+}
+
+@media (min-width: 1024px) {
+    .desktop-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .child_tablet_img,
+    .service-highlights {
+        height: 260px;
+        width: auto;
+    }
+    .service-highlights {
+        padding: 40px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .service-highlights ul {
+        margin: 0px;
+        padding: 0px;
+    }
+    .service-highlights li {
+        margin: 3px 0px;
+        font-size: 17px;
+    }
+}
+
+
+/* Resize img of boy and Service Highlights to maintain aesthetically appeasing gap  */
+
+@media (min-width: 1250px) {
+    .child_tablet_img,
+    .service-highlights {
+        height: 360px;
+        width: auto;
+    }
+}
+
+@media (min-width: 1350px) {
+    .child_tablet_img,
+    .service-highlights {
+        height: 400px;
+        width: auto;
+    }
 }

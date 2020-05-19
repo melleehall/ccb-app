@@ -23,9 +23,10 @@ export default class SignupPathText extends Component {
                         Please, reach out to us at <a href='mailto:volunteers@clearcreekbroadband.com'>volunteers@clearcreekbroadband.com</a> with any questions.
                     </p>
                 </section>
+                <div className='desktop-row'>
                 <img src={childwithtablet} alt='Child holding tablet' className='child_tablet_img'/>
-                <section className='lightestgray'>
-                    <h2 className='signup-subhead'>CCB Service Highlights</h2>
+                <section className='lightestgray service-highlights'>
+                    <h2 className='signup-subhead bold'>CCB Service Highlights</h2>
                     <ul> 
                         <li>High-Speed Internet Connection</li>
                         <li>Easy Installation</li>
@@ -33,6 +34,7 @@ export default class SignupPathText extends Component {
                         <li>Excellent Customer Service</li>
                     </ul>
                 </section>
+                </div>
             </section>
         )
     }
