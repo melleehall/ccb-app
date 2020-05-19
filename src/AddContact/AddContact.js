@@ -239,6 +239,7 @@ export default class AddContact extends Component {
                 </label>
                 <input
                   type='text'
+                  value={this.state.firstname}
                   name='firstname'
                   id='firstname'
                   placeholder='Josey'
@@ -273,6 +274,7 @@ export default class AddContact extends Component {
                 </label>
                 <input
                   type='email'
+                  value={this.state.lastname}
                   name='email'
                   id='email'
                   placeholder='myemail@gmail.com'
