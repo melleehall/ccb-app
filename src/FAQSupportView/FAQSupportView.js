@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import './FAQSupportView.css'
 import '../universalstyles.css'
 import glasseslaptopphone from '../Images/glasseslaptopphone.jpg'
+import twopeoplewithlaptops from '../Images/twopeoplewithlaptops.jpg'
 import CCBLIDRoutes08202018 from '../Images/CCB_LID_Routes_2018-08-20.pdf'
 import CCCProposedLIDMap08012018 from '../Images/CCC-Proposed-LID-Map-08-01-2018.pdf'
 
@@ -66,7 +67,10 @@ export default class FAQSupportView extends Component {
                             </p>
                         </li>
                     </ul>
+                </section>
+                <section className='desktop-row-imgs'>
                     <img src={glasseslaptopphone} alt='glasses on top of laptop with smart phone' className='glasses-img' />
+                    <img src={twopeoplewithlaptops} alt='two people with laptops' className='two-laptops' />
                 </section>
                 <section>
                     <h2 className='lightestgray' id='email'>Still have questions or need assistance? </h2>

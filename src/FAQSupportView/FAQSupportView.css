@@ -31,6 +31,10 @@ h1 {
     overflow-wrap: break-word;
 }
 
+.service-form-content {
+    margin-bottom: 50px;
+}
+
 .support-btns {
     text-align: center;
     margin-bottom: 50px;
@@ -52,9 +56,51 @@ h1 {
     margin-bottom: 20px;
 }
 
-.glasses-img {
+.glasses-img,
+.two-laptops {
     margin-top: 30px;
     width: 100%;
     height: auto;
     border-radius: 0px;
+}
+
+.two-laptops {
+    display: none;
+}
+
+/* Larger Screens ie. Desktops */
+
+@media (min-width: 1024px) {
+    .desktop-row-imgs {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .two-laptops {
+        display: block;
+        margin-left: 20px;
+    }
+    .glasses-img,
+    .two-laptops {
+        height: 275px;
+        width: auto;
+    }
+}
+
+/* Resize imgs to maintain aesthetically appeasing gap  */
+
+@media (min-width: 1175px) {
+    .glasses-img,
+    .two-laptops {
+        height: 300px;
+        width: auto;
+    }
+}
+
+@media (min-width: 1325px) {
+    .glasses-img,
+    .two-laptops {
+        height: 350px;
+        width: auto;
+    }
 }

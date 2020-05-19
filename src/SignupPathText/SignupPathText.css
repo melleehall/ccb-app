@@ -50,6 +50,10 @@ p {
     overflow-wrap: break-word;
 }
 
+
+
+/* Larger Screens ie. Desktops */
+
 @media (min-width: 1024px) {
     .desktop-row {
         display: flex;
