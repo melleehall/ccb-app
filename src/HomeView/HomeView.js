@@ -43,8 +43,12 @@ export default class HomeView extends Component {
                     <h2 className='lightestgray'>Network Status</h2>
                     <p className='lightestgray summary'>
                         The CCB Team is working hard to bring service in as quickly as possible - as soon as the fall of 2020 and no later than the spring of 2021.
-                        You can now visit our <Link to='/signup'>Signup Page</Link> to request service which helps us to better understand and plan for demand in each region.
-                        We will update this website frequently to keep everyone aware of progress and updates.
+                        We are currently selecting subcontactors to build the sites and updates will be shared as sites near completion, the first of which will be later this summer.
+                        As sites are nearing completion, we will begin ordering and configuring signal distribution equipment and lastly, contact neighbors who have signed up for service.
+                    </p>
+                    <p className='lightestgray summary'>
+                        In the meantime, you can help us prepare accordingly by visiting our <Link to='/signup'>Signup Page</Link> to request service or joining our mailing list.
+                        We also need volunteers to help get the word out about our progress and generate knowledge of the Signup Page to help us best understand demand in each region.              
                     </p>
                     <div className='img-container'>
                         <img src={mntlaptop} alt='laptop with mountain background' className='img'/>
