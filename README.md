@@ -1,6 +1,6 @@
 <h1>CCB React Client<h1>
 
-* Live Website: https://ccb-app.now.sh/
+* Live Website: https://www.clearcreekbroadband.com/
 
 ## Description
 

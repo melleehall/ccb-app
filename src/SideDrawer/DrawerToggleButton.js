@@ -1,6 +1,7 @@
 import React from 'react'
 import './DrawerToggleButton.css'
 
+// Hamburger menu
 function drawerToggleButton (props) {
     return (
         <button className='toggle-button' id='menu-toggle' aria-label='Open the menu' onClick={props.click}>
