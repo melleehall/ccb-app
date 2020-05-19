@@ -174,7 +174,7 @@ export default class AddContact extends Component {
           lastname: {value: ''},
           email: {value: ''},
           phone: {value: ''},
-          streenum: {value: ''},
+          streetnum: {value: ''},
           streetname: {value: ''},
           city: {value: ''},
           zip: {value: ''},
