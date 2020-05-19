@@ -51,6 +51,15 @@ p {
 }
 
 
+/* Smaller Screens ie. Pixel 2 and iPhone 5 */
+
+@media (max-width: 411px) {
+    .service-highlights li {
+        margin-left: 0px;
+        list-style-type: disc;
+    }
+}
+
 
 /* Larger Screens ie. Desktops */
 
