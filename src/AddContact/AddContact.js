@@ -276,6 +276,7 @@ export default class AddContact extends Component {
                 <input
                   type='email'
                   name='email'
+                  value={this.state.email.value}
                   id='email'
                   placeholder='myemail@gmail.com'
                   required aria-required="true"
@@ -293,6 +294,7 @@ export default class AddContact extends Component {
                 <input
                   type='text'
                   name='phone'
+                  value={this.state.phone.value}
                   id='phone'
                   placeholder='(303)-123-4567'
                   required aria-required="true"
@@ -312,6 +314,7 @@ export default class AddContact extends Component {
                 <input
                   type='text'
                   name='streetnum'
+                  value={this.state.streetnum.value}
                   id='streetnum'
                   placeholder='123'
                   required aria-required="true"
@@ -329,6 +332,7 @@ export default class AddContact extends Component {
                 <input
                   type='text'
                   name='streetname'
+                  value={this.state.streetname.value}
                   id='streetname'
                   placeholder='Frog Road'
                   required aria-required="true"
@@ -346,6 +350,7 @@ export default class AddContact extends Component {
                 <input
                   type='text'
                   name='city'
+                  value={this.state.city.value}
                   id='city'
                   placeholder='Evergreen'
                   required aria-required="true"
@@ -363,6 +368,7 @@ export default class AddContact extends Component {
                 <input
                   type='text'
                   name='zip'
+                  value={this.state.zip.value}
                   id='zip'
                   placeholder='97531'
                   required aria-required="true"
