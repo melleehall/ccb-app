@@ -3,6 +3,7 @@ import ValidationError from '../ValidationError/ValidationError'
 import config from '../config'
 import './AddContact.css'
 
+// Signup Page - controlled form
 export default class AddContact extends Component {
   state = {
     error: null,
@@ -188,6 +189,7 @@ export default class AddContact extends Component {
       })
   }
 
+  // toggle checkboxes when clicked
   toggleReqService= () => {
     this.setState(prevState => ({
       request_service: !prevState.request_service,
@@ -207,6 +209,7 @@ export default class AddContact extends Component {
   }
 
   render() {
+    // conditionally rendered validation errors 
     const { error } = this.state;
     const firstnameError = this.validateFirstname();
     const lastnameError = this.validateLastname();    

@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 import './SideDrawer.css'
 
+// Displays navigation links for mobile / small screens
 const sideDrawer = props => {
     let drawerClasses = 'side-drawer';
 

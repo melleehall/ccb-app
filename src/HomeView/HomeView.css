@@ -132,6 +132,10 @@ h2.lightestgray {
     height: 1600px;
 }
 
+.volunteer-email {
+    display: block;
+}
+
 /* Device = iPhone 5/SE */
 /* Screen = under 355px */
 
@@ -141,7 +145,7 @@ h2.lightestgray {
     }
 }
 
-/* Preventing volunteers email from text-wrap on small screens */
+/* Adjusting volunteers email for various screen sizes to avoid needing text wrap */
 
 @media (max-width: 355px) {
     .volunteer-p a {
@@ -152,6 +156,12 @@ h2.lightestgray {
 @media (min-width: 356px) and (max-width: 455px) {
     .volunteer-p a {
         font-size: 14px;
+    }
+}
+
+@media (min-width: 456px) {
+    .volunteer-p a {
+        font-size: 18px;
     }
 }
 

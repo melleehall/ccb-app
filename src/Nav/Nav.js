@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom'
 import '../SideDrawer/DrawerToggleButton'
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton'
 import './Nav.css'
+
+// Desktop/large screen navigation
 export default class Nav extends Component {
     render() {
         return (

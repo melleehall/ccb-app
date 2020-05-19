@@ -1,5 +1,6 @@
 import React from 'react'
 
+// displayed if invalid path used with url
 export default function RenderNotFoundMain() {
     return(
         <div>
