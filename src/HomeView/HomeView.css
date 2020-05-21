@@ -9,6 +9,7 @@
 
 .friends-neighbors {
     font-weight: 700;
+    font-size: 25px;
 }
 
 .intro-p {
@@ -25,8 +26,12 @@ h2.lightestgray {
     font-weight: 700;
 }
 
-.who-are-we {
+.net-stat-header {
     margin-top: 250px;
+}
+
+.who-are-we {
+    margin-top: 50px;
 }
 
 .wires-img,
@@ -134,6 +139,15 @@ h2.lightestgray {
 
 .volunteer-email {
     display: block;
+}
+
+.net-stat-header h2 {
+    font-weight: 700;
+}
+
+.net-stat-header h2,
+.net-stat-header h3 {
+    color: black;
 }
 
 /* Device = iPhone 5/SE */

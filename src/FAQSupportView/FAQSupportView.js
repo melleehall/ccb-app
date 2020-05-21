@@ -22,6 +22,10 @@ export default class FAQSupportView extends Component {
                     <h2 className='lightestgray' id='faq'>FAQ</h2>
                     <ul className='faq-list lightestgray'>
                         <li>
+                            <p className='faq-question'>What sort of tasks will I be assigned to as a volunteer?</p>
+                            <p className='faq-answer'>Volunteers will primarily be focused on contacting each and every neighbor to ensure that they are informed about CCB's service and timeline.  Additionally, volunteers will ensure that we have accurate contact information for each household.</p>
+                        </li>
+                        <li>
                             <p className='faq-question'>When will the network be built?</p>
                             <p className='faq-answer'>We are working hard to bring service in as quickly as possible - as soon as the fall of 2020 and no later than the spring of 2021.</p>
                         </li>

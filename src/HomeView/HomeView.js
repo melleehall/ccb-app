@@ -26,21 +26,11 @@ export default class HomeView extends Component {
                         <Link to='/signup' id='signup-desktop' className='signup-btn' role='button' aria-pressed='false'>Sign Me Up</Link>                 
                     </section>  
                     </div> 
-                <section>
-                    <h2 className='lightestgray who-are-we block'>Who are we?</h2>
-                    <p className='summary lightestgray block'>
-                        Clear Creek Broadband (CCB) is a local internet service company dedicated to providing our neighbors in Eastern Clear Creek County with access to a highspeed broadband connection. 
-                        Our fixed wireless broadband network will provide the speeds and local support to make each of our homes ready for the internet services of today and tomorrow. 
-                    </p>
-                </section>
-                <section>
-                <div className='img-container'>
-                    <img src={bandwmnt} alt='black and white mountains' className='img' />
-                    <div className='mnt-txt'>FAST.  LOCAL. </div>
-                </div>
-                </section>
-                <section>
-                    <h2 className='lightestgray'>Network Status</h2>
+                    <section>
+                    <div className='lightestgray net-stat-header'>
+                        <h2>Network Status</h2>
+                        <h3>As of: 5-18-2020</h3>
+                    </div>
                     <p className='lightestgray summary'>
                         The CCB Team is working hard to bring service in as quickly as possible - as soon as the fall of 2020 and no later than the spring of 2021.
                         We are currently selecting subcontactors to build the sites and updates will be shared as sites near completion, the first of which will be later this summer.
@@ -57,6 +47,19 @@ export default class HomeView extends Component {
                             ENJOY THE INTERNET SERVICES OF TODAY... & TOMORROW.
                         </div>
                     </div>
+                </section>
+                <section>
+                    <h2 className='lightestgray who-are-we block'>Who are we?</h2>
+                    <p className='summary lightestgray block'>
+                        Clear Creek Broadband (CCB) is a local internet service company dedicated to providing our neighbors in Eastern Clear Creek County with access to a highspeed broadband connection. 
+                        Our fixed wireless broadband network will provide the speeds and local support to make each of our homes ready for the internet services of today and tomorrow. 
+                    </p>
+                </section>
+                <section>
+                <div className='img-container'>
+                    <img src={bandwmnt} alt='black and white mountains' className='img' />
+                    <div className='mnt-txt'>FAST.  LOCAL. </div>
+                </div>
                 </section>
             </section>
         )
