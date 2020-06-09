@@ -11,34 +11,41 @@ export default class HomeView extends Component {
             <section className='landing-view flex-col'>
                     <section className='lightestgray'>
                         <p className='friends-neighbors'>
-                            Friends and neighbors, high-speed internet is coming to Eastern Clear Creek County.
+                            Friends and neighbors, high-speed internet is coming to Eastern Clear Creek County.  Request service today so that we can build our network with you in mind.
                         </p>
                     </section>
                     <div className='wires-container block'>
                     <section className='intro-p'>
                         <h2 className='latest'>Latest News</h2>
                         <p>
-                            We are currently in need of volunteers in each of the five service regions to help us by contacting residents and gathering emails and phone numbers.
+                            We need to know about your interest in service in order to size and plan the network appropriately for demand.  
+                            Please, complete our sign-up form today and tell us if you are interested in receiving broadband.  
                         </p>
                         <p className='volunteer-p'>
-                            Visit our Signup page or email us: <a href='mailto:volunteers@clearcreekbroadband.com?subject=Clear Creek Broadband Volunteer Opportunity' className='volunteer-email'>volunteers@clearcreekbroadband.com</a>
-                        </p>
+                            If you know of renters or neighbors that have interest, please urge them to sign up now too so that we can build accordingly.                         </p>
                         <Link to='/signup' id='signup-desktop' className='signup-btn' role='button' aria-pressed='false'>Sign Me Up</Link>                 
                     </section>  
                     </div> 
                     <section>
                     <div className='lightestgray net-stat-header'>
                         <h2>Network Status</h2>
-                        <h3>As of: 5-18-2020</h3>
+                        <h3>As of: 06-09-2020</h3>
                     </div>
                     <p className='lightestgray summary'>
-                        The CCB Team is working hard to bring service in as quickly as possible - as soon as the fall of 2020 and no later than the spring of 2021.
-                        We are currently selecting subcontactors to build the sites and updates will be shared as sites near completion, the first of which will be later this summer.
-                        As sites are nearing completion, we will begin ordering and configuring signal distribution equipment and lastly, contact neighbors who have signed up for service.
+                        All contracts are signed for our main serving sites.   
+                        Thank you to everyone for helping us reach this major milestone.
+                        We have also finished selecting all equipment.  
+                        We will be using Cambium 450 for our main network and Arviat for our tower-to-tower backhaul network.  
+                        We will post updates both in this section (Network Status) as well as on the <Link to='/support'>FAQ Page</Link> explaining what equipment you will need in your home to be ready once service becomes available.
                     </p>
                     <p className='lightestgray summary'>
-                        In the meantime, you can help us prepare accordingly by visiting our <Link to='/signup'>Signup Page</Link> to request service or joining our mailing list.
-                        We also need volunteers to help get the word out about our progress and generate knowledge of the Signup Page to help us best understand demand in each region.              
+                        Contractors for building the towers have been selected, and we are starting to build our main hub site this month.  
+                        By July, we will be testing and want to bring on the other towers/regions as quickly as possible.  
+                        It is very importation to let us know <span className='bold'>now</span> if you are interested in service.  
+                        This is a change from our initial plan, because some areas have very high demand and lots of pre-sales while others may not be aware of our efforts.
+                    </p>
+                    <p className='lightestgray summary'>
+                        Check in here frequently to keep track of our progress so that you can be sure not to commit to another long-term contract with a satellite company.
                     </p>
                     <div className='img-container'>
                         <img src={mntlaptop} alt='laptop with mountain background' className='img'/>
