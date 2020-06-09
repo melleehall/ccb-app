@@ -22,7 +22,7 @@ export default class HomeView extends Component {
                             Please, complete our sign-up form today and tell us if you are interested in receiving broadband.  
                         </p>
                         <p className='volunteer-p'>
-                            If you know of renters or neighbors that have interest, please urge them to sign up now too so that we can build accordingly.                         </p>
+                            If you know of renters or neighbors who have interest, please urge them to sign up now too so that we can build accordingly.                         </p>
                         <Link to='/signup' id='signup-desktop' className='signup-btn' role='button' aria-pressed='false'>Sign Me Up</Link>                 
                     </section>  
                     </div> 
