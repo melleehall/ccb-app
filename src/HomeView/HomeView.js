@@ -37,8 +37,8 @@ export default class HomeView extends Component {
                         We will continue to post updates both in this section (Network Status) as well as on the <Link to='/support'>FAQ Page</Link> explaining what equipment you will need in your home to be ready once service becomes available.
                     </p>
                     <p className='lightestgray summary'>
-                        This month, we will continue building our main hub site and plan to begin testing towards the end of the month.
-                        We want to bring on the other towers/regions as quickly as possible, so it is very import to let us know now if you are interested in service.  
+                        We are building our main hub site and want to bring on the other towers/regions as quickly as possible. 
+                        It is very important to let us know now if you are interested in service.  
                         This is a change from our initial plan, because some areas have very high demand and lots of pre-sales while others may not be aware of our efforts.
                         If you know of renters or neighbors who have interest, please urge them to sign up now too.
                     </p>
