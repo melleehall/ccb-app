@@ -11,38 +11,36 @@ export default class HomeView extends Component {
             <section className='landing-view flex-col'>
                     <section className='lightestgray'>
                         <p className='friends-neighbors'>
-                            Friends and neighbors, high-speed internet is coming to Eastern Clear Creek County.  Request service today so that we can build our network with you in mind.
+                            Friends and neighbors, high-speed internet is coming to Eastern Clear Creek County.  
                         </p>
                     </section>
                     <div className='wires-container block'>
                     <section className='intro-p'>
                         <h2 className='latest'>Latest News</h2>
                         <p>
-                            We need to know about your interest in service in order to size and plan the network appropriately for demand.  
-                            Please, complete our sign-up form today and tell us if you are interested in receiving broadband.  
+                            Opt in for our Prepaid Offer by July 15th (limit 25 subscribers) to save $240 on your first year of service and initial equipment and install costs.
+                            Please, mail a check for $1,000 made out to Clear Creek Broadband, LLC to 456 Crystal Ridge Road, Evergreen, CO 80439. 
                         </p>
                         <p className='volunteer-p'>
-                            If you know of renters or neighbors who have interest, please urge them to sign up now too so that we can build accordingly.                         </p>
+                            If you would like service but are not opting in for the limited-time offer, click on the 'Sign Me Up' button below and select 'Request Service' on our contact form.
+                        </p>
                         <Link to='/signup' id='signup-desktop' className='signup-btn' role='button' aria-pressed='false'>Sign Me Up</Link>                 
                     </section>  
                     </div> 
                     <section>
                     <div className='lightestgray net-stat-header'>
                         <h2>Network Status</h2>
-                        <h3>As of: 06-09-2020</h3>
+                        <h3>As of: 07-03-2020</h3>
                     </div>
                     <p className='lightestgray summary'>
-                        All contracts are signed for our main serving sites.   
-                        Thank you to everyone for helping us reach this major milestone.
-                        We have also finished selecting all equipment.  
-                        We will be using Cambium 450 for our main network and Arviat for our tower-to-tower backhaul network.  
-                        We will post updates both in this section (Network Status) as well as on the <Link to='/support'>FAQ Page</Link> explaining what equipment you will need in your home to be ready once service becomes available.
+                        As shared last month, our equipment selections include the Cambium 450 for our main network and Aviat for our tower-to-tower backhaul network.  
+                        We will continue to post updates both in this section (Network Status) as well as on the <Link to='/support'>FAQ Page</Link> explaining what equipment you will need in your home to be ready once service becomes available.
                     </p>
                     <p className='lightestgray summary'>
-                        Contractors for building the towers have been selected, and we are starting to build our main hub site this month.  
-                        By July, we will be testing and want to bring on the other towers/regions as quickly as possible.  
-                        It is very importation to let us know <span className='bold'>now</span> if you are interested in service.  
+                        This month, we will continue building our main hub site and plan to begin testing towards the end of the month.
+                        We want to bring on the other towers/regions as quickly as possible, so it is very import to let us know now if you are interested in service.  
                         This is a change from our initial plan, because some areas have very high demand and lots of pre-sales while others may not be aware of our efforts.
+                        If you know of renters or neighbors who have interest, please urge them to sign up now too.
                     </p>
                     <p className='lightestgray summary'>
                         Check in here frequently to keep track of our progress so that you can be sure not to commit to another long-term contract with a satellite company.

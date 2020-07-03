@@ -120,11 +120,12 @@ h2.lightestgray {
 .latest {
     font-size: 30px;
     font-weight: 550;
-    height: 60px;
+    height: 50px;
     padding: 5px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 15px;
+    margin-top: 0px;
+    margin-bottom: 10px;
     color: black;
 }
 
