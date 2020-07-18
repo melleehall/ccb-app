@@ -18,11 +18,10 @@ export default class HomeView extends Component {
                     <section className='intro-p'>
                         <h2 className='latest'>Latest News</h2>
                         <p>
-                            Opt in for our Prepaid Offer by July 15th (limit 25 subscribers) to save $240 on your first year of service and initial equipment and install costs.
-                            Please, mail a check for $1,000 made out to Clear Creek Broadband, LLC to 456 Crystal Ridge Road, Evergreen, CO 80439. 
+                            We are looking for a volunteer from the Upper Witter Gulch area to join our team of seven fantastic Neighborhood Captains.  Contact us at <a href='mailto:support@clearcreekbroadband.com'>support@clearcreekbroadband.com</a> if you can help!
                         </p>
                         <p className='volunteer-p'>
-                            If you would like service but are not opting in for the limited-time offer, click on the 'Sign Me Up' button below and select 'Request Service' on our contact form.
+                            Help us to build the network with you in mind. Click on the 'Sign Me Up' button below and select 'Request Service' on our contact form.
                         </p>
                         <Link to='/signup' id='signup-desktop' className='signup-btn' role='button' aria-pressed='false'>Sign Me Up</Link>                 
                     </section>  
@@ -30,14 +29,14 @@ export default class HomeView extends Component {
                     <section>
                     <div className='lightestgray net-stat-header'>
                         <h2>Network Status</h2>
-                        <h3>As of: 07-03-2020</h3>
+                        <h3>As of: 07-18-2020</h3>
                     </div>
                     <p className='lightestgray summary'>
                         As shared last month, our equipment selections include the Cambium 450 for our main network and Aviat for our tower-to-tower backhaul network.  
-                        We will continue to post updates both in this section (Network Status) as well as on the <Link to='/support'>FAQ Page</Link> explaining what equipment you will need in your home to be ready once service becomes available.
+                        We will post updates on both this page and on the <Link to='/support'>FAQ Page</Link> explaining what equipment you will need in your home to be ready once service becomes available.
                     </p>
                     <p className='lightestgray summary'>
-                        We are building our main hub site and want to bring on the other towers/regions as quickly as possible. 
+                        We are building our main hub site and will be working hard to establish service in the other areas of our network as quickly as possible. 
                         It is very important to let us know now if you are interested in service.  
                         This is a change from our initial plan, because some areas have very high demand and lots of pre-sales while others may not be aware of our efforts.
                         If you know of renters or neighbors who have interest, please urge them to sign up now too.

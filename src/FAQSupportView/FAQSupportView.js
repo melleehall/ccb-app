@@ -22,8 +22,8 @@ export default class FAQSupportView extends Component {
                     <h2 className='lightestgray' id='faq'>FAQ</h2>
                     <ul className='faq-list lightestgray'>
                         <li>
-                            <p className='faq-question'>What sort of tasks will I be assigned to as a volunteer?</p>
-                            <p className='faq-answer'>Volunteers will primarily be focused on contacting each and every neighbor to ensure that they are informed about CCB's service and timeline.  Additionally, volunteers will ensure that we have accurate contact information for each household.</p>
+                            <p className='faq-question'>What sort of tasks are your volunteers helping with?</p>
+                            <p className='faq-answer'>Volunteers are primarily focused on contacting each and every neighbor to ensure that they are informed about CCB's service and timeline.  Additionally, volunteers ensure that we have accurate contact information for each household.  We are currently looking for a volunteer from the Upper Witter Gulch neighborhood.</p>
                         </li>
                         <li>
                             <p className='faq-question'>When will the network be built?</p>
@@ -62,12 +62,6 @@ export default class FAQSupportView extends Component {
                             </p>
                             <p className='faq-answer'>
                                 The service areas include Old Squaw Pass, Echo Hills, Upper Witter Gulch, Lower Witter Gulch/Circle K, and Golden Willow/Yankee Creek.
-                            </p>
-                        </li>
-                        <li>
-                            <p className='faq-question'>What is the proposed design for the broadband system?</p>
-                            <p className='faq-answer'>
-                                For an aerial view of the proposed broadband system design, please click here: <a href={CCBLIDRoutes08202018} target='_blank' rel="noopener noreferrer">CCB Map of the Proposed Broadband System Design</a>
                             </p>
                         </li>
                     </ul>
