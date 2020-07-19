@@ -23,7 +23,11 @@ export default class FAQSupportView extends Component {
                     <ul className='faq-list lightestgray'>
                         <li>
                             <p className='faq-question'>What sort of tasks are your volunteers helping with?</p>
-                            <p className='faq-answer'>Volunteers are primarily focused on contacting each and every neighbor to ensure that they are informed about CCB's service and timeline.  Additionally, volunteers ensure that we have accurate contact information for each household.  We are currently looking for a volunteer from the Upper Witter Gulch neighborhood.</p>
+                            <p className='faq-answer'>
+                                Volunteers are primarily focused on contacting each and every neighbor to ensure that they are informed about CCB's service and timeline.  
+                                Additionally, volunteers ensure that we have accurate contact information for each household.  
+                                We are currently looking for volunteers from the Upper Witter Gulch and Echo Hills neighborhoods.
+                            </p>
                         </li>
                         <li>
                             <p className='faq-question'>When will the network be built?</p>

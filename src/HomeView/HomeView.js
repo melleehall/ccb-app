@@ -18,7 +18,7 @@ export default class HomeView extends Component {
                     <section className='intro-p'>
                         <h2 className='latest'>Latest News</h2>
                         <p>
-                            We are looking for a volunteer from the Upper Witter Gulch area to join our team of seven fantastic Neighborhood Captains.  Contact us at <a href='mailto:support@clearcreekbroadband.com'>support@clearcreekbroadband.com</a> if you can help!
+                            We are looking for volunteers from the Upper Witter Gulch and Echo Hills areas to join our team of seven fantastic Neighborhood Captains.  Contact us at <a href='mailto:support@clearcreekbroadband.com'>support@clearcreekbroadband.com</a> if you can help!
                         </p>
                         <p className='volunteer-p'>
                             Help us to build the network with you in mind. Click on the 'Sign Me Up' button below and select 'Request Service' on our contact form.
