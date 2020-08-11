@@ -18,10 +18,11 @@ export default class HomeView extends Component {
                     <section className='intro-p'>
                         <h2 className='latest'>Latest News</h2>
                         <p>
-                            We are looking for volunteers from the Upper Witter Gulch and Echo Hills areas to join our team of seven fantastic Neighborhood Captains.  Contact us at <a href='mailto:support@clearcreekbroadband.com'>support@clearcreekbroadband.com</a> if you can help!
+                            We have primary connection near completion at our main hub site, King Murphy!
+                            We will be testing the equipment and service inside of "pilot" homes by the end of August.
                         </p>
                         <p className='volunteer-p'>
-                            Help us to build the network with you in mind. Click on the 'Sign Me Up' button below and select 'Request Service' on our contact form.
+                            If we do not already have your current contact information, please, click on the 'Sign Me Up' button below and submit the form so that we can notify you when service is available for your home.
                         </p>
                         <Link to='/signup' id='signup-desktop' className='signup-btn' role='button' aria-pressed='false'>Sign Me Up</Link>                 
                     </section>  
@@ -29,20 +30,31 @@ export default class HomeView extends Component {
                     <section>
                     <div className='lightestgray net-stat-header'>
                         <h2>Network Status</h2>
-                        <h3>As of: 07-18-2020</h3>
+                        <h3>As of: 08-10-2020</h3>
                     </div>
                     <p className='lightestgray summary'>
-                        As shared last month, our equipment selections include the Cambium 450 for our main network and Aviat for our tower-to-tower backhaul network.  
-                        We will post updates on both this page and on the <Link to='/support'>FAQ Page</Link> explaining what equipment you will need in your home to be ready once service becomes available.
+                       We are sure that many of you are wondering what we are up to so here is a quick update...
                     </p>
                     <p className='lightestgray summary'>
-                        We are building our main hub site and will be working hard to establish service in the other areas of our network as quickly as possible. 
-                        It is very important to let us know now if you are interested in service.  
-                        This is a change from our initial plan, because some areas have very high demand and lots of pre-sales while others may not be aware of our efforts.
-                        If you know of renters or neighbors who have interest, please urge them to sign up now too.
+                        We have primary connection near completion at King Murphy which is our main hub site.  
+                        We also have all of the internet connections provisioned and will first be testing the radios and then the equipment inside of some “pilot” homes by the end of August.  
+                        The subscribers' home equipment will include a receiver (think of a small satellite dish on the roof or side of the house) which will be wired to a router inside the home.  
+                        We will post some pictures of the equipment on our website to give you an idea of what it looks like.
                     </p>
                     <p className='lightestgray summary'>
-                        Check in here frequently to keep track of our progress so that you can be sure not to commit to another long-term contract with a satellite company.
+                        The other serving locations will be towers which are currently being engineered with permitting and construction to follow.  
+                        We found a local general contractor who has deep Clear Creek roots and has dealt with the county process many times, so we are hopeful that we can get primary construction phases completed before the weather turns bad.  
+                        Once the towers are built, it will take a few weeks to get transmitting radios placed onto the towers and into service.
+                        We are still targeting to provide service to all areas by the end of the year. 
+                    </p>
+                    <p className='lightestgray summary'>
+                        Meanwhile, we are working behind the scenes on adding customer features to the website and procuring equipment so as areas open for service, we are ready to support all subscribers.  
+                        Preparations include developing training and installation processes, customer materials, and other basic tasks needed to run a service.
+                    </p>
+                    <p className='lightestgray summary'>
+                        Thank you all for your support (we got a significant number of prepaid deposits!) and for your interest in our service.  
+                        I know that many of you are eager to have access to high-speed internet and may feel like it is taking a long time, but we were officially awarded funds in March so for all practical purposes, we are a few months into the construction phase.  
+                        There is so much to do and so little time to get it all done, but we will continue to post major updates about the network build and service here.  
                     </p>
                     <div className='img-container'>
                         <img src={mntlaptop} alt='laptop with mountain background' className='img'/>
