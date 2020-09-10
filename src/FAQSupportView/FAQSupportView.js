@@ -60,6 +60,13 @@ export default class FAQSupportView extends Component {
                             </p>
                         </li>
                         <li>
+                            <p className='faq-question'>Will precipitation such as snow affect the reliability or speed of my service?</p>
+                            <p className='faq-answer'>
+                                No, rain and snow will not have a significant impact on your connection or the speeds you receive.  
+                                Your installer will assist in selecting an optimal location to mount your external radio so that you can get a reliable signal year-round. 
+                            </p>
+                        </li>
+                        <li>
                             <p className='faq-question'>Can I see a map of the proposed broadband service area?</p>
                             <p className='faq-answer'>
                                 Yes! To view a current version of the service area map, please click here: <a href={CCCProposedLIDMap08012018} target='_blank' rel="noopener noreferrer">Proposed Broadband Service Area Map</a>
