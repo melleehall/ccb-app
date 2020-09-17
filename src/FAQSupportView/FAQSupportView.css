@@ -65,10 +65,17 @@ h1 {
     border-radius: 0px;
 }
 
-.cpe-container {
+.cpe-container,
+figure {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+.cpe-container figcaption {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 5px;
 }
 
 .cpe-img {
@@ -93,7 +100,7 @@ h1 {
     .desktop-row-imgs {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     .two-laptops {
         display: block;
@@ -102,7 +109,7 @@ h1 {
     .glasses-img,
     .two-laptops,
     .cpe-img {
-        height: 275px;
+        height: 235px;
         width: auto;
     }
     .cpe-container {

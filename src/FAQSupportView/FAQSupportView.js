@@ -6,7 +6,6 @@ import glasseslaptopphone from '../Images/glasseslaptopphone.jpg'
 import twopeoplewithlaptops from '../Images/twopeoplewithlaptops.jpg'
 import cpeRouter from '../Images/cnPilotr195W.jpeg'
 import cpeRadio from '../Images/450bSM.png'
-import CCBLIDRoutes08202018 from '../Images/CCB_LID_Routes_2018-08-20.pdf'
 import CCCProposedLIDMap08012018 from '../Images/CCC-Proposed-LID-Map-08-01-2018.pdf'
 
 export default class FAQSupportView extends Component {
@@ -38,8 +37,14 @@ export default class FAQSupportView extends Component {
                                 The subscribers' home equipment will include a receiver (think of a small satellite dish on the roof or side of the house) which will be wired to a router inside the home.
                             </p>
                             <div className='cpe-container'>
-                                <img src={cpeRouter} alt='Cambium PMP 450b high gain subscriber module' className='cpe-img'/>
-                                <img src={cpeRadio} alt='Cambium PMP 450b high gain subscriber module' className='cpe-img'/>
+                                <figure>
+                                    <img src={cpeRouter} alt='Cambium PMP 450b high gain subscriber module' className='cpe-img'/>
+                                    <figcaption>Router</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src={cpeRadio} alt='Cambium PMP 450b high gain subscriber module' className='cpe-img'/>
+                                    <figcaption>Receiver</figcaption>
+                                </figure>
                             </div>
                         </li>
                         <li>
