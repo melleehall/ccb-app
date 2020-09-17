@@ -4,9 +4,8 @@ import './FAQSupportView.css'
 import '../universalstyles.css'
 import glasseslaptopphone from '../Images/glasseslaptopphone.jpg'
 import twopeoplewithlaptops from '../Images/twopeoplewithlaptops.jpg'
-import cpeRouter from '../Images/cnPilotr195W.jpeg'
+import cpeRouter from '../Images/cnPilotr195W.jpg'
 import cpeRadio from '../Images/450bSM.png'
-import CCBLIDRoutes08202018 from '../Images/CCB_LID_Routes_2018-08-20.pdf'
 import CCCProposedLIDMap08012018 from '../Images/CCC-Proposed-LID-Map-08-01-2018.pdf'
 
 export default class FAQSupportView extends Component {
