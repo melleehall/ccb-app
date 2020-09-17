@@ -4,6 +4,8 @@ import './FAQSupportView.css'
 import '../universalstyles.css'
 import glasseslaptopphone from '../Images/glasseslaptopphone.jpg'
 import twopeoplewithlaptops from '../Images/twopeoplewithlaptops.jpg'
+import cpeRouter from '../Images/cnPilotr195W.jpeg'
+import cpeRadio from '../Images/450bSM.png'
 import CCBLIDRoutes08202018 from '../Images/CCB_LID_Routes_2018-08-20.pdf'
 import CCCProposedLIDMap08012018 from '../Images/CCC-Proposed-LID-Map-08-01-2018.pdf'
 
@@ -22,14 +24,6 @@ export default class FAQSupportView extends Component {
                     <h2 className='lightestgray' id='faq'>FAQ</h2>
                     <ul className='faq-list lightestgray'>
                         <li>
-                            <p className='faq-question'>What sort of tasks are your volunteers helping with?</p>
-                            <p className='faq-answer'>
-                                Volunteers are primarily focused on contacting each and every neighbor to ensure that they are informed about CCB's service and timeline.  
-                                Additionally, volunteers ensure that we have accurate contact information for each household.  
-                                We are currently looking for volunteers from the Upper Witter Gulch and Echo Hills neighborhoods.
-                            </p>
-                        </li>
-                        <li>
                             <p className='faq-question'>When will the network be built?</p>
                             <p className='faq-answer'>We are working hard to bring service in as quickly as possible - as soon as the fall of 2020 and no later than the spring of 2021.</p>
                         </li>
@@ -37,6 +31,16 @@ export default class FAQSupportView extends Component {
                             <p className='faq-question'>How much will service cost?</p>
                             <p className='faq-answer'>Service will cost $70.00 per month.  No additional fees or taxes will be charged.
                             </p>
+                        </li>
+                        <li>
+                            <p className='faq-question'>What kind of equipment will I need in my home to receive service?</p>
+                            <p className='faq-answer'>
+                                The subscribers' home equipment will include a receiver (think of a small satellite dish on the roof or side of the house) which will be wired to a router inside the home.
+                            </p>
+                            <div className='cpe-container'>
+                                <img src={cpeRouter} alt='Cambium PMP 450b high gain subscriber module' className='cpe-img'/>
+                                <img src={cpeRadio} alt='Cambium PMP 450b high gain subscriber module' className='cpe-img'/>
+                            </div>
                         </li>
                         <li>
                             <p className='faq-question'>How can I stay updated on the network build and find out when service will be available in my area?</p>
@@ -73,6 +77,14 @@ export default class FAQSupportView extends Component {
                             </p>
                             <p className='faq-answer'>
                                 The service areas include Old Squaw Pass, Echo Hills, Upper Witter Gulch, Lower Witter Gulch/Circle K, and Golden Willow/Yankee Creek.
+                            </p>
+                        </li>
+                        <li>
+                            <p className='faq-question'>What sort of tasks are your volunteers helping with?</p>
+                            <p className='faq-answer'>
+                                Volunteers are primarily focused on contacting each and every neighbor to ensure that they are informed about CCB's service and timeline.  
+                                Additionally, volunteers ensure that we have accurate contact information for each household.  
+                                We are currently looking for volunteers from the Upper Witter Gulch and Echo Hills neighborhoods.
                             </p>
                         </li>
                     </ul>
