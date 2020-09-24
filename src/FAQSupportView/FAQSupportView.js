@@ -6,6 +6,7 @@ import glasseslaptopphone from '../Images/glasseslaptopphone.jpg'
 import twopeoplewithlaptops from '../Images/twopeoplewithlaptops.jpg'
 import cpeRouter from '../Images/cnPilotr195W.jpg'
 import cpeRadio from '../Images/450bSM.png'
+import initialCoverage from '../Images/KMInitialCoverageAreas.png'
 import CCCProposedLIDMap08012018 from '../Images/CCC-Proposed-LID-Map-08-01-2018.pdf'
 
 export default class FAQSupportView extends Component {
@@ -83,6 +84,16 @@ export default class FAQSupportView extends Component {
                             <p className='faq-answer'>
                                 The service areas include Old Squaw Pass, Echo Hills, Upper Witter Gulch, Lower Witter Gulch/Circle K, and Golden Willow/Yankee Creek.
                             </p>
+                        </li>
+                        <li>
+                            <p className='faq-question'>Can I see a map of the areas that will be covered by the King Murphy main hub site?</p>
+                            <p className='faq-answer'>
+                                Yes, here it is!  
+                                The areas outlined in purple will be served by our main hub serving site and so will be the first to receive service this fall.
+                                The rest of our broadband service area will be covered by towers.  
+                                Please, read our Network Status on the Home page for the latest update on the tower serving sites.
+                            </p>
+                            <img src={initialCoverage} alt='Map showing First Phase of Broadband Coverage Area' className='km-map-img'/>
                         </li>
                         <li>
                             <p className='faq-question'>What sort of tasks are your volunteers helping with?</p>

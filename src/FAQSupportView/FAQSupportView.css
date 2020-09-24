@@ -78,8 +78,17 @@ figure {
     margin-top: 5px;
 }
 
-.cpe-img {
+.cpe-img,
+.km-map-img {
     border: 2px solid black;
+}
+
+.km-map-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: auto;
 }
 
 .two-laptops {
