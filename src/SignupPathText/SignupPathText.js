@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import CCCProposedLIDMap from '../Images/CCC-Proposed-LID-Map-08-01-2018.pdf'
+import serviceAreas from '../Images/serviceAreas.pdf'
 import childwithtablet from '../Images/childwithtablet.jpg'
 import './SignupPathText.css'
 
@@ -12,7 +12,7 @@ export default class SignupPathText extends Component {
                     <h2 className='signup-subhead lightestgray'>Explanation of Signup Options</h2>
                     <p className='lightestgray'> <span className='bold'>Request Service:</span> This does not obligate you to take the service once available but rather helps us to understand demand in each region.
                         We are currently designing the network and knowing who is interested will help us to better plan how to accommodate all users.
-                        If you are unsure whether your home will be serviced by the new network, please refer to the service area map: <a href={CCCProposedLIDMap}>Proposed Broadband Service Area Map</a>
+                        If you are unsure whether your home will be serviced by the new network, please refer to the service area map: <a href={serviceAreas}>Proposed Broadband Service Area Map</a>
                     </p>
                     <p className='lightestgray'>
                         <span className='bold'>Subscribe to Mailing List:</span> If you have joined our mailing list, thank you and welcome!  We promise to limit our communication to important updates.  

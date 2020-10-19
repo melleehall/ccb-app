@@ -7,7 +7,7 @@ import twopeoplewithlaptops from '../Images/twopeoplewithlaptops.jpg'
 import cpeRouter from '../Images/cnPilotr195W.jpg'
 import cpeRadio from '../Images/450bSM.png'
 import initialCoverage from '../Images/KMInitialCoverageAreas.png'
-import CCCProposedLIDMap08012018 from '../Images/CCC-Proposed-LID-Map-08-01-2018.pdf'
+import serviceAreas from '../Images/serviceAreas.pdf'
 
 export default class FAQSupportView extends Component {
     render() {
@@ -79,7 +79,7 @@ export default class FAQSupportView extends Component {
                         <li>
                             <p className='faq-question'>Can I see a map of the proposed broadband service area?</p>
                             <p className='faq-answer'>
-                                Yes! To view a current version of the service area map, please click here: <a href={CCCProposedLIDMap08012018} target='_blank' rel="noopener noreferrer">Proposed Broadband Service Area Map</a>
+                                Yes! To view a current version of the service area map, please click here: <a href={serviceAreas} target='_blank' rel="noopener noreferrer">Proposed Broadband Service Area Map</a>
                             </p>
                             <p className='faq-answer'>
                                 The service areas include Old Squaw Pass, Echo Hills, Upper Witter Gulch, Lower Witter Gulch/Circle K, and Golden Willow/Yankee Creek.
