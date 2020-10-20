@@ -118,7 +118,7 @@ figure {
     .glasses-img,
     .two-laptops,
     .cpe-img {
-        height: 235px;
+        height: 200px;
         width: auto;
     }
     .cpe-container {
@@ -132,7 +132,7 @@ figure {
     .glasses-img,
     .two-laptops,
     .cpe-img {
-        height: 300px;
+        height: 250px;
         width: auto;
     }
 }
@@ -141,7 +141,7 @@ figure {
     .glasses-img,
     .two-laptops,
     .cpe-img {
-        height: 350px;
+        height: 300px;
         width: auto;
     }
 }
