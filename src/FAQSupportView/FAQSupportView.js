@@ -25,11 +25,31 @@ export default class FAQSupportView extends Component {
                     <ul className='faq-list lightestgray'>
                         <li>
                             <p className='faq-question'>When will the network be built?</p>
-                            <p className='faq-answer'>We are working hard to bring service in as quickly as possible - as soon as the fall of 2020 and no later than the spring of 2021.</p>
+                            <p className='faq-answer'>​Our hub site is operational, and we are providing service in our first coverage area near King Murphy.  
+                                We are working hard to build out the rest of the network as quickly as possible.  
+                                Please, refer to the Network Status section of the Home page for the latest update on timing for coverage in all service areas.
+                            </p>
                         </li>
                         <li>
-                            <p className='faq-question'>How much will service cost?</p>
-                            <p className='faq-answer'>Service will cost $70.00 per month.  No additional fees or taxes will be charged.
+                            <p className='faq-question'>How can I sign up for service?</p>
+                            <p className='faq-answer'>
+                                We are currently contacting homeowners who receive service directly from the hub site at King Murphy and completing their customer equipment installations.  
+                                If you would like service and have not yet shared your preferred contact information with us, please submit the form on our Signup page so we can get in touch with you.
+                            </p>
+                        </li>
+                        <li>
+                            <p className='faq-question'>Once I sign up, what are the steps to get service?</p>
+                            <p className='faq-answer'>
+                                First, we perform a signal analysis to make sure our serving site(s) can provide you service. 
+                                We then schedule a time to complete a site survey.  
+                                During the site walk, we talk to you about the preferred location of the receiver, where in the home you would like service and what options we have for installation.  
+                                Once all those questions have been addressed, we schedule a time to install the equipment and wiring to get your home connected. 
+                                The installation appointment is approximately three hours.  
+                            </p>
+                            <p className='faq-answer'>
+                                It involves mounting the receiver, running wire from the receiver to the point of entry into the house, setting up the router, and grounding the electronics.
+                                Unless there is an existing penetration, your installer will need to drill a hole that is large enough for the wire to pass through from the exterior to the inside of the home.
+                                Lastly, we test the router to verify that you are getting service.
                             </p>
                         </li>
                         <li>
@@ -47,6 +67,19 @@ export default class FAQSupportView extends Component {
                                     <figcaption>Receiver</figcaption>
                                 </figure>
                             </div>
+                        </li>
+                        <li>
+                            <p className='faq-question'>What are the costs for the customer equipment and installation?</p>
+                            <p className='faq-answer'>
+                                The total cost of the receiver and router is $300.  
+                                A standard installation costs $125.  
+                                Custom installation requests such as running cable through interior walls require prior review and approval and are subject to additional charges. 
+                            </p>
+                        </li>
+                        <li>
+                            <p className='faq-question'>How much will service cost?</p>
+                            <p className='faq-answer'>Service will cost $70.00 per month.  No additional fees or taxes will be charged.
+                            </p>
                         </li>
                         <li>
                             <p className='faq-question'>How can I stay updated on the network build and find out when service will be available in my area?</p>

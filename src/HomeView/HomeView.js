@@ -18,11 +18,12 @@ export default class HomeView extends Component {
                     <section className='intro-p'>
                         <h2 className='latest'>Latest News</h2>
                         <p> 
-                            We will begin offering service to some homes served by the King Murphy hub site by the end of October.  We will soon begin contacting eligible neighbors to schedule site surveys and home equipment installations.
+                            We are currently contacting neighbors who are served directly by the King Murphy hub site to schedule home equipment installations!
                         </p>
+
                         <p className='volunteer-p'>
                             Various strains on our projected timeline for serving all areas have required us to revise our target service date for homes not served directly by the hub site.
-                            Please, read the Network Status Update for details.
+                            Please, read the Network Status Update for additional details.
                         </p>
                         <Link to='/signup' id='signup-desktop' className='signup-btn' role='button' aria-pressed='false'>Sign Me Up</Link>                 
                     </section>  
