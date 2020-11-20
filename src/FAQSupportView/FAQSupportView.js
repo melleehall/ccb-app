@@ -8,6 +8,7 @@ import cpeRouter from '../Images/cnPilotr195W.jpg'
 import cpeRadio from '../Images/450bSM.png'
 import initialCoverage from '../Images/KMInitialCoverageAreas.png'
 import serviceAreas from '../Images/serviceAreas.pdf'
+import serviceTerms from '../Images/CCBServiceTerms.pdf'
 
 export default class FAQSupportView extends Component {
     render() {
@@ -101,6 +102,10 @@ export default class FAQSupportView extends Component {
                                 Upload speed describes how quickly data is sent from you to others - examples of upload activities include sending images to a friend via email or posting a comment to Facebook.
                                 Eastern Clear Creek County's existing internet provider offers 1.5 Mbps download and 0.75 Mbps upload speeds.  With CCB's network, you can expect 33 times faster download and 13 times faster upload speeds.
                             </p>
+                        </li>
+                        <li>
+                            <p className='faq-question'>What are the terms of service?</p>
+                            <p className='faq-answer'>You can view them here: <a href={serviceTerms} target='_blank' rel="noopener nonreffer">Service Terms</a></p>
                         </li>
                         <li>
                             <p className='faq-question'>Will precipitation such as snow affect the reliability or speed of my service?</p>
