@@ -25,21 +25,28 @@ export default class FAQSupportView extends Component {
                     <h2 className='lightestgray' id='faq'>FAQ</h2>
                     <ul className='faq-list lightestgray'>
                         <li>
-                            <p className='faq-question'>When will the network be built?</p>
-                            <p className='faq-answer'>​Our hub site is operational, and we are providing service in our first coverage area near King Murphy.  
+                            <p className='faq-question'>
+                                When will the network be built?
+                            </p>
+                            <p className='faq-answer'>​
+                                Our hub site is operational, and we are providing service in our first coverage area near King Murphy.  
                                 We are working hard to build out the rest of the network as quickly as possible.  
                                 Please, refer to the Network Status section of the Home page for the latest update on timing for coverage in all service areas.
                             </p>
                         </li>
                         <li>
-                            <p className='faq-question'>How can I sign up for service?</p>
+                            <p className='faq-question'>
+                                How can I sign up for service?
+                            </p>
                             <p className='faq-answer'>
                                 We are currently contacting homeowners who receive service directly from the hub site at King Murphy and completing their customer equipment installations.  
                                 If you would like service and have not yet shared your preferred contact information with us, please submit the form on our Signup page so we can get in touch with you.
                             </p>
                         </li>
                         <li>
-                            <p className='faq-question'>Once I sign up, what are the steps to get service?</p>
+                            <p className='faq-question'>
+                                Once I sign up, what are the steps to get service?
+                            </p>
                             <p className='faq-answer'>
                                 First, we perform a signal analysis to make sure our serving site(s) can provide you service. 
                                 We then schedule a time to complete a site survey.  
@@ -54,7 +61,9 @@ export default class FAQSupportView extends Component {
                             </p>
                         </li>
                         <li>
-                            <p className='faq-question'>What kind of equipment will I need in my home to receive service?</p>
+                            <p className='faq-question'>
+                                What kind of equipment will I need in my home to receive service?
+                            </p>
                             <p className='faq-answer'>
                                 The subscribers' home equipment will include a receiver (think of a small satellite dish on the roof or side of the house) which will be wired to a router inside the home.
                             </p>
@@ -70,7 +79,9 @@ export default class FAQSupportView extends Component {
                             </div>
                         </li>
                         <li>
-                            <p className='faq-question'>What are the costs for the customer equipment and installation?</p>
+                            <p className='faq-question'>
+                                What are the costs for the customer equipment and installation?
+                            </p>
                             <p className='faq-answer'>
                                 The total cost of the receiver and router is $300.  
                                 A standard installation costs $125.  
@@ -78,19 +89,48 @@ export default class FAQSupportView extends Component {
                             </p>
                         </li>
                         <li>
-                            <p className='faq-question'>How much will service cost?</p>
-                            <p className='faq-answer'>Service will cost $70.00 per month.  No additional fees or taxes will be charged.
+                            <p className='faq-question'>
+                                How much will service cost?
+                            </p>
+                            <p className='faq-answer'>
+                                Service will cost $70.00 per month.  No additional fees or taxes will be charged.
                             </p>
                         </li>
                         <li>
-                            <p className='faq-question'>How can I stay updated on the network build and find out when service will be available in my area?</p>
-                            <p className='faq-answer'>Please, visit the <NavLink to='/signup'>Signup Page</NavLink> to subscribe to our mailing list.
-                                You can also refer to the "Latest News" section of the <NavLink to='/'>Home Page</NavLink> of this website for progress updates. 
+                            <p className='faq-question'>
+                                What is the difference between internet and WiFi?
+                            </p>
+                            <p className='faq-answer'> 
+                                Believe it or not, internet and WiFi are not the same although many people use the terms interchangeably. 
+                            </p>
+                            <p className='faq-answer'>
+                                The internet is a global system that connects millions of computer networks around the world.   
+                                A home WiFi network allows devices such as computers and printers to be connected locally and to the internet (through your wireless router) in lieu of using actual cables.
+                            </p>
+                            <p className='faq-answer'>
+                                Clear Creek Broadband provides a connection to the internet.  
+                                We will also install a wireless router that provides your devices with access to the internet.  
+                                The homeowner is responsible for how the service operates in the home.  
+                                If you have older equipment, a large property etc. your home system will need to be designed to meet your needs.
+                                CCB does not do this, but we can provide suggestions on preferred equipment and what systems have fewer service issues.
                             </p>
                         </li>
                         <li>
-                            <p className='faq-question'>Who is building the network?</p>
-                            <p className='faq-answer'>Clear Creek Broadband along with subcontractors.</p>
+                            <p className='faq-question'>
+                                How can I stay updated on the network build and find out when service will be available in my area?
+                            </p>
+                            <p className='faq-answer'>
+                                Please, refer to the "Latest News" section of the <NavLink to='/'>Home Page</NavLink> of this website for progress updates.
+                                If you have not already provided us with your current contact information, please visit the <NavLink to='/signup'>Signup Page</NavLink> so that we know you are interested and can in touch with you when it is time to install your home equipment.
+                            </p>
+                        </li>
+                        <li>
+                            <p className='faq-question'>
+                                Who is building the network?
+                            </p>
+                            <p className='faq-answer'>
+                                Clear Creek Broadband along with subcontractors.
+                            </p>
                         </li>
                         <li>
                             <p className='faq-question'>What upload and download speeds will the network offer?</p>
@@ -104,18 +144,26 @@ export default class FAQSupportView extends Component {
                             </p>
                         </li>
                         <li>
-                            <p className='faq-question'>What are the terms of service?</p>
-                            <p className='faq-answer'>You can view them here: <a href={serviceTerms} target='_blank' rel="noopener nonreffer">Service Terms</a></p>
+                            <p className='faq-question'>
+                                What are the terms of service?
+                            </p>
+                            <p className='faq-answer'>
+                                You can view them here: <a href={serviceTerms} target='_blank' rel="noopener nonreffer">Service Terms</a>
+                            </p>
                         </li>
                         <li>
-                            <p className='faq-question'>Will precipitation such as snow affect the reliability or speed of my service?</p>
+                            <p className='faq-question'>
+                                Will precipitation such as snow affect the reliability or speed of my service?
+                            </p>
                             <p className='faq-answer'>
-                                No, rain and snow will not have a significant impact on your connection or the speeds you receive.  
+                                Rain and snow will not have a significant impact on your connection or the speeds you receive.  
                                 Your installer will assist in selecting an optimal location to mount your external radio so that you can get a reliable signal year-round. 
                             </p>
                         </li>
                         <li>
-                            <p className='faq-question'>Can I see a map of the proposed broadband service area?</p>
+                            <p className='faq-question'>
+                                Can I see a map of the proposed broadband service area?
+                            </p>
                             <p className='faq-answer'>
                                 Yes! To view a current version of the service area map, please click here: <a href={serviceAreas} target='_blank' rel="noopener noreferrer">Proposed Broadband Service Area Map</a>
                             </p>
@@ -124,7 +172,9 @@ export default class FAQSupportView extends Component {
                             </p>
                         </li>
                         <li>
-                            <p className='faq-question'>Can I see a map of the areas that will be covered by the King Murphy main hub site?</p>
+                            <p className='faq-question'>
+                                Can I see a map of the areas that will be covered by the King Murphy main hub site?
+                            </p>
                             <p className='faq-answer'>
                                 Yes, here it is!  
                                 The areas outlined in purple will be served by our main hub serving site and so will be the first to receive service this fall.
