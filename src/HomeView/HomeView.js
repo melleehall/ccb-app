@@ -18,7 +18,7 @@ export default class HomeView extends Component {
                     <section className='intro-p'>
                         <h2 className='latest'>Latest News</h2>
                         <p>
-                            Please, read our latest Network Status update and keep checking the site to see if your area is being opened up for customer equipment installations. 
+                            Please, read our Network Status update and keep checking the site to see if your area is being opened up for customer equipment installations. 
                         </p>
                         <p className='volunteer-p'>
                             You can find the answers to commonly asked questions on our FAQ page such as "What speeds does the network offer?", "How much will service cost?", and "What is the difference between internet and WiFi?". 
@@ -41,8 +41,8 @@ export default class HomeView extends Component {
                     </p>
                     <p className='lightestgray summary'>
                         The towers serve a majority of the homes in our initial service area, but they will not reach all of our homes. 
-                        To serve the remaining homes, we need to add a second "hop" which we refer to as a "Repeater Site".  
-                        Repeater Sites are attached to homes that already receive service, and they retransmit to other homes that cannot be served directly by the towers.  
+                        To serve the remaining homes, we need to add second "hops" which we refer to as "Repeater Sites".  
+                        Repeater Sites are attached to homes that already receive service, and they retransmit to other homes that cannot be served directly by a Tower.  
                         They do not require any permitting or county processes - only approval from the homeowner of the Repeater Site.  
                     </p>
                     <p className='lightestgray summary'>
@@ -59,6 +59,19 @@ export default class HomeView extends Component {
                             <li>3) CCB will not be providing your in-home WiFi service but can make some suggestions on what works best.  Our FAQ page has an explanation for "What is the difference between internet and WiFi?" if you an unsure what we mean by "in-home WiFi service".</li>
                         </ol>
                     </p>
+                    <div className='divider'>
+                    </div>
+                    <section className='testimonial'>
+                        <q className='block'>
+                        We’ve been waiting for this for a long time, finally a true broadband service for this area, especially when people are having to spend more time at home. 
+                        Download and upload speeds are both as advertised or better, and there isn’t the lag associated with satellite internet. 
+                        Installation proceeded smoothly, the crew was very courteous, and the outdoor dish install and cabling were professionally done. 
+                        We have a real sense of relief now with Clear Creek Broadband.
+                        </q>
+                        -- Dahl and Loren (Pilot Homeowners)
+                    </section>
+                    <div className='divider'>
+                    </div>
                     <div className='img-container'>
                         <img src={mntlaptop} alt='laptop with mountain background' className='img'/>
                         <div className='mnt-txt'>

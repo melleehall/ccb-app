@@ -7,6 +7,15 @@
     text-align: left;
 }
 
+.customer-contact h2 {
+    color: black;
+    font-weight: 600;
+}
+
 .contact-info li {
     overflow-wrap: break-word;
+}
+
+.questions {
+    margin-top: 15px;
 }

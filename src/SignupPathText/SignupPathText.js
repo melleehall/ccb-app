@@ -19,8 +19,8 @@ export default class SignupPathText extends Component {
                         All are invited and encouraged to join our mailing list whether or not you are currently eligible for service.
                     </p>
                     <p className='lightestgray'>
-                        <span className='bold'>Volunteer:</span> We are looking for neighbors in each of the five service regions to help us contact all residents and ensure their contact information is current.  
-                        Please, reach out to us at <a href='mailto:volunteers@clearcreekbroadband.com'>volunteers@clearcreekbroadband.com</a> with any questions.
+                        <span className='bold'>Volunteer:</span> Earlier this year we assembled a team of awesome volunteers to help us collect contact information from neighbors and gauge interest in each area.  
+                        We expect to have future opportunities for volunteers to help with CCB efforts so let us know if you would be interested.
                     </p>
                 </section>
                 <div className='desktop-row'>

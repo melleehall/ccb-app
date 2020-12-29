@@ -190,9 +190,9 @@ export default class FAQSupportView extends Component {
                     <img src={twopeoplewithlaptops} alt='two people with laptops' className='two-laptops' />
                 </section>
                 <section>
-                    <h2 className='lightestgray' id='email'>Still have questions or need assistance? </h2>
+                    <h2 className='lightestgray' id='email'>Still have questions or need general assistance? </h2>
                     <p className='service-form-content lightestgray'>
-                        Email us at <a href="mailto:support@clearcreekbroadband.com">support@clearcreekbroadband.com</a>.  
+                        Email us at <a href="mailto:questions@clearcreekbroadband.com">questions@clearcreekbroadband.com</a>.  
                         We look forward to assisting you!
                     </p>
                 </section>

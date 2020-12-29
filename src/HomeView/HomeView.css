@@ -159,6 +159,19 @@ h2.lightestgray {
     margin: 15px 0px;
 }
 
+.divider {
+    width: 80%;
+    height: 10px;
+    border: black solid 3px;
+    margin: 40px auto 5px auto;
+    border-radius: 25px;
+}
+
+.testimonial {
+    border: black solid 5px;
+    padding: 15px;
+}
+
 /* Device = iPhone 5/SE */
 /* Screen = under 355px */
 
