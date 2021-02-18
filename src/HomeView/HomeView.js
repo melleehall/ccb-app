@@ -18,10 +18,10 @@ export default class HomeView extends Component {
                     <section className='intro-p'>
                         <h2 className='latest'>Latest News</h2>
                         <p>
-                            Please, read our Network Status update and keep checking the site to see if your area is being opened up for customer equipment installations. 
+                            We received zoning approval from the county commissioners for all three of our primary tower serving sites, and the building plans are being reviewed by the county.
                         </p>
                         <p className='volunteer-p'>
-                            You can find the answers to commonly asked questions on our FAQ page such as "What speeds does the network offer?", "How much will service cost?", and "What is the difference between internet and WiFi?". 
+                            Prepare for your future installation now by visiting our FAQ page to find out what speeds the network offers, the difference between internet and WiFi, and more.
                         </p>
                         <Link to='/support' id='signup-desktop' className='signup-btn' role='button' aria-pressed='false'>Visit FAQs</Link>                 
                     </section>  
@@ -29,34 +29,34 @@ export default class HomeView extends Component {
                     <section>
                     <div className='lightestgray net-stat-header'>
                         <h2>Network Status</h2>
-                        <h3>December 2020</h3>
+                        <h3>February 2021</h3>
                     </div>
                     <p className='lightestgray summary'>
                         Dear Neighbors, 
-                        The Clear Creek Broadband network has various points of distribution to bring service to your home.  
-                        We call the main sites “Towers”, and we have three that will be constructed in the spring.  
-                        All three towers are being reviewed and approved by the county for zoning and permitting.  
-                        These approvals need to go thru the Planning Commission and then on to the Board of County Commissioners.  
-                        Our final review with the county for the serving towers is scheduled for the first week of January with construction to follow.
+                        We received zoning approval from the county commissioners for all three of our primary tower serving sites.  
+                        The building plans are being reviewed by the county, and we anticipate building permits being issued the first week of March.  
                     </p>
                     <p className='lightestgray summary'>
-                        The towers serve a majority of the homes in our initial service area, but they will not reach all of our homes. 
-                        To serve the remaining homes, we need to add second "hops" which we refer to as "Repeater Sites".  
-                        Repeater Sites are attached to homes that already receive service, and they retransmit to other homes that cannot be served directly by a Tower.  
-                        They do not require any permitting or county processes - only approval from the homeowner of the Repeater Site.  
+                        In March and April, we will be busy with site preparation, foundation construction, assembly and erection of the towers, and installing the serving radios and electronics.  
+                        We expect the towers to be ready to provide service in May and will begin contacting neighbors to schedule home equipment installations a few weeks prior to when we are able to provide service.  
+                        Please, understand that our projected timeline is subject to winter weather conditions with our Yankee Creek serving site being the most susceptible to access challenges and potential delays.
                     </p>
                     <p className='lightestgray summary'>
-                        We continue to scout for areas where we need to add Repeater Sites to our network, so we can reach our goal of 80% coverage.  
-                        We currently have two Repeater Sites under construction and will be adding a couple more in January 2021.  
-                        Please, keep checking the site to see if your area is being opened up for customer equipment installations. 
+                        We are piloting service in French Springs and parts of the Bendemeer area right now through a distribution point that is not dependent on the towers.  
+                        Our pilot volunteers are very happy with their service, and we anticipate fully opening these new areas up for service in March.
                     </p>
                     <p className='lightestgray summary'>
-                        As we get close to installing in homes and reflect on what we learned from our pilots, we would like to share some key points that homeowners need to think about regarding how the service will work best for them.  
-                        We have tried to address some of these issues on our FAQ page but the main considerations are the following:
+                        We are still scouting for repeater site hosts to fill in small coverage gaps.  
+                        Please, contact us at "questions@clearcreekbroadband.com" if you are interested in helping and would like more information.  
+                        We are grateful for all the support that we are receiving for the project. Thank you!
+                    </p>
+                    <p className='lightestgray summary'>
+                        Here are a few things that you can do to prepare for your installation:
                         <ol className='homeowner-list'>
-                            <li>1) We have to locate the receiver dish/antenna in a place that gets the best signal.  The location is typically high on the side of the home or on the roof.</li>
-                            <li>2) The wire will need to come into your home in a place where it can either be connected to your home network or where it is central to the home so that the signal can be distributed throughout your living spaces.  If you have a larger home you may need extra wiring or equipment so think about how you want your home set up. </li>
-                            <li>3) CCB will not be providing your in-home WiFi service but can make some suggestions on what works best.  Our FAQ page has an explanation for "What is the difference between internet and WiFi?" if you an unsure what we mean by "in-home WiFi service".</li>
+                            <li>1) Submit the form on our Signup Page to request service if you have not already or if your contact information has changed.</li>
+                            <li>2) Read "What is the difference between internet and WiFi?" on our <NavLink to='/support'>FAQ Page</NavLink> and understand what our scope of work will be for your installation. </li>
+                            <li>3) Locate your grounding wire and think about where you would like service in your home.  Your installer will want to know where you would like your router installed.</li>
+                            <li>4) Purchase a power strip.  This will give you more flexibility to plug in devices to the same outlet that powers your router which is especially useful in home offices.</li>
                         </ol>
                     </p>
                     <div className='divider'>

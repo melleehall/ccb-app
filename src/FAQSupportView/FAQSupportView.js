@@ -6,7 +6,6 @@ import glasseslaptopphone from '../Images/glasseslaptopphone.jpg'
 import twopeoplewithlaptops from '../Images/twopeoplewithlaptops.jpg'
 import cpeRouter from '../Images/cnPilotr195W.jpg'
 import cpeRadio from '../Images/450bSM.png'
-import initialCoverage from '../Images/KMInitialCoverageAreas.png'
 import serviceAreas from '../Images/serviceAreas.pdf'
 import serviceTerms from '../Images/CCBServiceTerms.pdf'
 
@@ -29,9 +28,8 @@ export default class FAQSupportView extends Component {
                                 When will the network be built?
                             </p>
                             <p className='faq-answer'>​
-                                Our hub site is operational, and we are providing service in our first coverage area near King Murphy.  
-                                We are working hard to build out the rest of the network as quickly as possible.  
-                                Please, refer to the Network Status section of the Home page for the latest update on timing for coverage in all service areas.
+                                Please, refer to the Network Status section of the Home page for the latest update on timing for coverage throughout the network.  
+                                Our hub site is operational, and we are providing service to certain areas that do not require a connection to one of our primary tower sites to be served.
                             </p>
                         </li>
                         <li>
@@ -39,8 +37,12 @@ export default class FAQSupportView extends Component {
                                 How can I sign up for service?
                             </p>
                             <p className='faq-answer'>
-                                We are currently contacting homeowners who receive service directly from the hub site at King Murphy and completing their customer equipment installations.  
-                                If you would like service and have not yet shared your preferred contact information with us, please submit the form on our Signup page so we can get in touch with you.
+                                If you would like service and have not yet shared your preferred contact information with us, please submit the form on our Signup page so we can get in touch when we are able to provide you with service.
+                            </p>
+                            <p className='faq-answer'>
+                                We are scheduling customer equipment installations for neighbors who can currently receive service and have requested it through the Signup form or prepaid bundle.  
+                                We will begin contacting neighbors who are served through the primary tower serving sites regarding their home equipment installations a few weeks prior to when we are able to provide service.
+                                Please, understand that the list of neighbors who need service is very long, and we will be working as quickly as possible to get everyone set-up.
                             </p>
                         </li>
                         <li>
@@ -50,12 +52,14 @@ export default class FAQSupportView extends Component {
                             <p className='faq-answer'>
                                 First, we perform a signal analysis to make sure our serving site(s) can provide you service. 
                                 We then schedule a time to complete a site survey.  
-                                During the site walk, we talk to you about the preferred location of the receiver, where in the home you would like service and what options we have for installation.  
-                                Once all those questions have been addressed, we schedule a time to install the equipment and wiring to get your home connected. 
-                                The installation appointment is approximately three hours.  
                             </p>
                             <p className='faq-answer'>
-                                It involves mounting the receiver, running wire from the receiver to the point of entry into the house, setting up the router, and grounding the electronics.
+                                Upon arrival to your home, we complete a signal test to verify that we can provide you with service and then, talk to you about the preferred location of the receiver, where in the home you would like service and what options we have for installation.  
+                                Once all those questions have been addressed, we schedule a time to install the equipment and wiring to get your home connected. 
+                            </p>
+                            <p className='faq-answer'>
+                                The installation appointment is approximately three hours.  
+                                It involves mounting the receiver, running cable from the receiver to the point of entry into the house, setting up the router, and grounding the electronics.
                                 Unless there is an existing penetration, your installer will need to drill a hole that is large enough for the wire to pass through from the exterior to the inside of the home.
                                 Lastly, we test the router to verify that you are getting service.
                             </p>
@@ -85,7 +89,8 @@ export default class FAQSupportView extends Component {
                             <p className='faq-answer'>
                                 The total cost of the receiver and router is $300.  
                                 A standard installation costs $125.  
-                                Custom installation requests such as running cable through interior walls require prior review and approval and are subject to additional charges. 
+                                During your site survey, we will determine whether any special equipment or labor is required to bring you service.  
+                                Custom solutions require prior approval and are subject to additional charges.
                             </p>
                         </li>
                         <li>
@@ -135,7 +140,7 @@ export default class FAQSupportView extends Component {
                         <li>
                             <p className='faq-question'>What upload and download speeds will the network offer?</p>
                             <p className='faq-answer'>
-                                You can expect to see speeds of at least 50 Mbps download speed and 10 Mbps upload speed.  
+                                You can expect to see internet speeds of at least 50 Mbps download speed and 10 Mbps upload speed.  
                             </p>
                             <p className='faq-answer'>
                                 Download speed describes how quickly data is transferred from a server to your computer - examples of download activities include streaming a video on YouTube and loading a web page to read an article.
@@ -148,7 +153,7 @@ export default class FAQSupportView extends Component {
                                 What are the terms of service?
                             </p>
                             <p className='faq-answer'>
-                                You can view them here: <a href={serviceTerms} target='_blank' rel="noopener nonreffer">Service Terms</a>
+                                You can view them here: <a href={serviceTerms} target='_blank' rel="noopener noreferrer">Service Terms</a>
                             </p>
                         </li>
                         <li>
@@ -170,18 +175,6 @@ export default class FAQSupportView extends Component {
                             <p className='faq-answer'>
                                 The service areas include Old Squaw Pass, Echo Hills, Upper Witter Gulch, Lower Witter Gulch/Circle K, and Golden Willow/Yankee Creek.
                             </p>
-                        </li>
-                        <li>
-                            <p className='faq-question'>
-                                Can I see a map of the areas that will be covered by the King Murphy main hub site?
-                            </p>
-                            <p className='faq-answer'>
-                                Yes, here it is!  
-                                The areas outlined in purple will be served by our main hub serving site and so will be the first to receive service this fall.
-                                The rest of our broadband service area will be covered by towers.  
-                                Please, read our Network Status on the Home page for the latest update on the tower serving sites.
-                            </p>
-                            <img src={initialCoverage} alt='Map showing First Phase of Broadband Coverage Area' className='km-map-img'/>
                         </li>
                     </ul>
                 </section>
